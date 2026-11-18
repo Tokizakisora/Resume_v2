@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+<title id="title">機器人控制流程示意</title><desc id="desc">原創機器人控制概念圖，以感測、判斷、動作和測試構成反覆調整的流程。不是原始LabVIEW程式截圖。</desc>
+<defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#faf7fc"/><stop offset="1" stop-color="#f3edf8"/></linearGradient><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1L6 4L1 7" fill="none" stroke="#a38ab8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="800" height="500" rx="24" fill="url(#paper)"/>
+<circle cx="740" cy="20" r="175" fill="none" stroke="#e7dced" stroke-width="1"/>
+<g font-family="Segoe UI,Microsoft JhengHei,system-ui,sans-serif" fill="#30263e">
+<text x="48" y="42" font-size="13" letter-spacing="2" fill="#806891">LabVIEW / ROBOTICS</text>
+<text x="48" y="92" font-size="34" font-weight="650">讓感測成為動作</text>
+<rect x="48" y="152" width="164" height="200" rx="22" fill="#fffcff" stroke="#e3d7ed"/><text x="66" y="180" font-size="13" fill="#ad97bd">01</text><text x="130" y="289" text-anchor="middle" font-size="28" font-weight="600">感測</text><text x="130" y="319" text-anchor="middle" font-size="17" fill="#806891">讀取環境</text><path d="M216 252H224" stroke="#a38ab8" stroke-width="2" marker-end="url(#arrow)"/><rect x="228" y="152" width="164" height="200" rx="22" fill="#fffcff" stroke="#e3d7ed"/><text x="246" y="180" font-size="13" fill="#ad97bd">02</text><text x="310" y="289" text-anchor="middle" font-size="28" font-weight="600">判斷</text><text x="310" y="319" text-anchor="middle" font-size="17" fill="#806891">處理狀態</text><path d="M396 252H404" stroke="#a38ab8" stroke-width="2" marker-end="url(#arrow)"/><rect x="408" y="152" width="164" height="200" rx="22" fill="#fffcff" stroke="#e3d7ed"/><text x="426" y="180" font-size="13" fill="#ad97bd">03</text><text x="490" y="289" text-anchor="middle" font-size="28" font-weight="600">動作</text><text x="490" y="319" text-anchor="middle" font-size="17" fill="#806891">控制執行</text><path d="M576 252H584" stroke="#a38ab8" stroke-width="2" marker-end="url(#arrow)"/><rect x="588" y="152" width="164" height="200" rx="22" fill="#fffcff" stroke="#e3d7ed"/><text x="606" y="180" font-size="13" fill="#ad97bd">04</text><text x="670" y="289" text-anchor="middle" font-size="28" font-weight="600">測試</text><text x="670" y="319" text-anchor="middle" font-size="17" fill="#806891">觀察結果</text><g fill="none" stroke="#8f6da9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="130" cy="225" r="6" fill="#a88aba" stroke="none"/><path d="M114 209A23 23 0 0 1 146 209M104 199A37 37 0 0 1 156 199M94 189A51 51 0 0 1 166 189"/>
+<path d="M310 194L332 216L310 238L288 216Z"/><path d="M288 216H275V242M332 216H345V242"/><circle cx="275" cy="246" r="4" fill="#a88aba" stroke="none"/><circle cx="345" cy="246" r="4" fill="#a88aba" stroke="none"/>
+<rect x="463" y="202" width="54" height="34" rx="9"/><circle cx="474" cy="242" r="7"/><circle cx="506" cy="242" r="7"/><path d="M490 202V192"/><circle cx="490" cy="188" r="4"/><path d="M478 216H482M499 216H503"/>
+<rect x="639" y="193" width="62" height="51" rx="9"/><path d="M648 220H657L664 206L674 230L681 218H691"/>
+<path d="M670 363V392H130V365" stroke="#b7a0c9" stroke-width="2" marker-end="url(#arrow)"/>
+</g><rect x="286" y="376" width="228" height="31" rx="15" fill="#f3edf8"/><text x="400" y="398" text-anchor="middle" font-size="17" fill="#806891">觀察結果 → 調整控制</text>
+<path d="M48 440H752" stroke="#e0d5e8"/>
+<text x="48" y="472" font-size="15" fill="#806891">控制流程示意 · 非原程式畫面</text>
+</g></svg>
