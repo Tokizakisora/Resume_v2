@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="360" viewBox="0 0 320 360" role="img" aria-labelledby="title">
+  <title id="title">林柏翰的「林」字章</title>
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2=".72" y2="1"><stop stop-color="#504366"/><stop offset=".46" stop-color="#2e253e"/><stop offset="1" stop-color="#302940"/></linearGradient>
+    <radialGradient id="light" cx=".21" cy=".11" r=".95"><stop stop-color="#c7a6d6" stop-opacity=".27"/><stop offset=".65" stop-color="#ad8fc2" stop-opacity="0"/></radialGradient>
+    <linearGradient id="letter" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#fff5df"/><stop offset=".46" stop-color="#fff5ff"/><stop offset="1" stop-color="#ddc4e9"/></linearGradient>
+  </defs>
+  <rect width="320" height="360" rx="40" fill="url(#ink)"/><rect width="320" height="360" rx="40" fill="url(#light)"/>
+  <g fill="none" stroke="#ecdbff">
+    <ellipse cx="160" cy="180" rx="138" ry="158" stroke-opacity=".19"/>
+    <path d="M43 111c21-46 50-72 93-83m63 297c42-14 71-42 86-81" stroke-opacity=".51" stroke-width="1.8"/>
+  </g>
+  <!-- Custom vector strokes keep the mark intact offline and at small sizes. -->
+  <g fill="url(#letter)" transform="translate(64 79) scale(1.62)">
+    <path d="m24 16 9 2-2 4v86l-7 4 1-81Z"/>
+    <path d="m6 40 33-1 6-6 9 9H7Z"/>
+    <path d="M25 43h6C25 62 15 77 3 86l-1-2c12-14 18-27 23-41Z"/>
+    <path d="M32 49c9 4 18 11 19 18 0 3-2 5-4 6-3-10-7-16-15-22Z"/>
+    <path d="m76 12 11 3-3 4v89l-8 4 1-83Z"/>
+    <path d="m51 39 46-1 7-7 11 10H52Z"/>
+    <path d="M76 42h7C75 64 63 83 44 97l-2-2c15-15 26-34 34-53Z"/>
+    <path d="M84 43c7 19 18 35 34 45l-1 2c-4 0-6 2-8 5-13-12-22-31-27-50Z"/>
+  </g>
+</svg>

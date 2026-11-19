@@ -1,4 +1,14 @@
 /* 學經歷、近期競賽、證照與聯絡資訊。 */
+.degree-details {
+  display:grid;
+  grid-template-columns:max-content minmax(0,1fr);
+  gap:.15em 1em;
+  align-items:baseline;
+  margin:.6em 0;
+}
+.degree-details dt { color:#654579; font-weight:600; }
+.degree-details dd { margin:0; }
+.schedule-entry { display:inline-flex; align-items:center; min-height:44px; color:#644477; text-decoration:underline; text-underline-offset:4px; font-weight:550; }
 @media screen {
   .skills-band {
     position:relative;
@@ -36,6 +46,34 @@
     color:#573666;
     font-size:.84rem;
     font-weight:600;
+  }
+  .ongoing-status {
+    display:inline-grid;
+    grid-template-columns:24px auto;
+    align-items:center;
+    gap:5px;
+    min-height:28px;
+    padding-inline:5px 10px;
+    vertical-align:middle;
+    white-space:nowrap;
+  }
+  .ongoing-status::before,.ongoing-status::after {
+    content:"";
+    grid-area:1 / 1;
+    place-self:center;
+    box-sizing:border-box;
+    border-radius:50%;
+    pointer-events:none;
+  }
+  .ongoing-status::before {
+    width:10px;
+    height:10px;
+    background:#71358d;
+  }
+  .ongoing-status::after {
+    width:15px;
+    height:15px;
+    border:1.5px solid #8850a3;
   }
   .competition-copy h3 { font-size:1.14rem; }
   .competition-copy > p:last-child { color:#65536f; font-size:1rem; }
@@ -124,17 +162,22 @@
   .hero-copy > :is(.eyebrow,h1,.identity,.hero-statement,.hero-intent,.hero-actions,.hero-email) { animation:none; }
 }
 @media screen and (prefers-reduced-motion:no-preference) {
-  .timeline-item[aria-current="step"]::before { animation:current-study-pulse 2.8s ease-out infinite; }
-  @keyframes current-study-pulse {
-    0% { box-shadow:0 0 0 3px #f2ebf7, 0 0 0 4px rgb(153 111 179 / .64); }
-    75%,100% { box-shadow:0 0 0 3px #f2ebf7, 0 0 0 10px rgb(153 111 179 / 0); }
+  .timeline-item[aria-current="step"]::before { animation:current-status-pulse 2.8s ease-out infinite; }
+  .ongoing-status::after { animation:competition-ring 1.85s ease-out infinite; }
+  @keyframes competition-ring {
+    0% { transform:scale(.8); opacity:.95; }
+    55% { opacity:.75; }
+    90%,100% { transform:scale(1.55); opacity:0; }
+  }
+  @keyframes current-status-pulse {
+    0% { box-shadow:var(--pulse-rim,0 0 0 3px #f2ebf7), 0 0 0 var(--pulse-start,4px) rgb(153 111 179 / .64); }
+    75%,100% { box-shadow:var(--pulse-rim,0 0 0 3px #f2ebf7), 0 0 0 var(--pulse-end,10px) rgb(153 111 179 / 0); }
   }
   .hero-actions .button { transition:box-shadow .18s ease, background .18s ease, border-color .18s ease; }
   .reveal-ready { transform:translateY(6px); transition-duration:.28s; }
   .reveal-ready:focus-within { opacity:1; transform:none; transition:none; }
 }
 @media screen and (max-width:600px) {
-  .hero-circuit { top:62px; }
   .hero-intent { font-size:.96rem; }
   .hero-actions { margin-top:16px; }
   .hero-actions .button { min-width:0; }

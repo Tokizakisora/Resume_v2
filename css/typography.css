@@ -1,0 +1,58 @@
+@font-face {
+  font-family:"Gallery Serif";
+  src:url("../assets/NotoSerifTC-headings.woff") format("woff");
+  font-weight:200 900;
+  font-display:swap;
+}
+
+:root {
+  --heading-face:"Gallery Serif","Noto Serif TC","Songti TC","PMingLiU",serif;
+}
+
+#hero-title,.resume-header h1 {
+  font-family:var(--heading-face);
+  font-weight:720;
+  letter-spacing:.085em;
+  line-height:1.32;
+}
+
+.section-title h2,.contact h2,.academic-toolbar h2,
+.detail-header h2,.resume-sheet section[id] > h2 {
+  font-family:var(--heading-face);
+  font-weight:680;
+  letter-spacing:.035em;
+}
+
+@media screen {
+  .hero-copy .identity,.resume-header .identity { font-size:1rem; line-height:1.65; }
+  .hero-email,.resume-header .contacts { font-size:.9375rem; line-height:1.7; }
+  .hero-award > span,.hero-award small { font-size:.875rem; line-height:1.55; }
+  .hero-award .award-event-name { white-space:nowrap; }
+  .timeline-label { font-size:.875rem; color:#6c5279; }
+  .project-meta,.project-tags .tag,.catalog .project-tags .tag,
+  .project-grid:not(.catalog) .project-open,.resume-sheet .work .work-meta {
+    font-size:.875rem;
+  }
+  .skill-item small { font-size:.875rem; line-height:1.6; color:#62536d; }
+  .skill-item strong { font-size:1rem; }
+  .resume-sheet .work h3 { font-size:1.125rem; line-height:1.5; }
+  .hero-statement { font-weight:570; line-height:1.65; }
+  .about-story > p:not(.lead),.learning-note > p:not(.eyebrow),.project-summary {
+    font-size:1rem;
+    line-height:1.85;
+    text-wrap:pretty;
+  }
+  .schedule-entry {
+    gap:.6em; padding:4px 12px; margin-top:6px; border:1px solid #d6c5df;
+    border-radius:9px; background:#f6f0f8; color:#563769;
+    font-size:.94rem; font-weight:570; text-decoration:none;
+  }
+  .schedule-entry::before {
+    content:""; display:inline-block; width:.85em; height:.85em; border:1.5px solid currentColor;
+    border-radius:3px; background:linear-gradient(to bottom,transparent 26%,currentColor 26% 38%,transparent 38%);
+  }
+  .schedule-entry:is(:hover,:focus-visible) { color:#462854; background:#eee3f3; border-color:#ab8cb8; }
+  .academic-average strong,.academic-credits dd,.week-table tbody th,.slot,.grade-mark,.rank-table td {
+    font-variant-numeric:lining-nums tabular-nums;
+  }
+}

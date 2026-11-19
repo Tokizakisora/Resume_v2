@@ -23,32 +23,6 @@
   }
   .gallery-backdrop::before { left:0; background-position:left 0 top 9vh; }
   .gallery-backdrop::after { right:0; transform:rotate(180deg); background-position:left 0 top -12vh; }
-  .hero-circuit {
-    position:absolute;
-    z-index:-1;
-    pointer-events:none;
-    width:29%;
-    left:40%;
-    top:50%;
-    transform:translateY(-50%);
-    aspect-ratio:310 / 260;
-    background:url("../assets/backgrounds/logic-trail.svg") center / contain no-repeat;
-    opacity:.84;
-  }
-}
-.hero-circuit svg { display:block; width:100%; height:100%; }
-.circuit-signal { display:none; }
-@media screen and (prefers-reduced-motion:no-preference) {
-  .circuit-signal { display:block; stroke-dasharray:9 260; animation:gallery-signal 8s ease-in-out infinite; }
-  @keyframes gallery-signal {
-    0% { stroke-dashoffset:10; opacity:0; }
-    10% { opacity:1; }
-    60% { opacity:1; }
-    74%,100% { stroke-dashoffset:-107; opacity:0; }
-  }
-}
-@media screen and (min-width:601px) and (max-width:1100px) {
-  .hero-circuit { width:clamp(85px,18%,155px); left:42%; top:14px; transform:none; opacity:.78; }
 }
 @media screen and (max-width:1200px) {
   .gallery-backdrop::before,.gallery-backdrop::after {
@@ -59,11 +33,10 @@
   }
 }
 @media screen and (max-width:600px) {
-  .hero-circuit { width:min(32%,140px); left:auto; right:3%; top:22px; transform:none; }
   .gallery-backdrop::before,.gallery-backdrop::after { width:9px; opacity:.4; }
 }
 @media print {
-  .gallery-backdrop,.hero-circuit { display:none; }
+  .gallery-backdrop { display:none; }
 }
 
 /* 同一張圖樣連續鋪在閱讀區，遮住頁底的色塊也使用相同線條。 */
@@ -123,16 +96,16 @@
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(112deg,transparent 37%,#62317d 48%,#ac708d 52%,transparent 63%) 120% center / 260% 100% no-repeat;
-    mask:var(--field-art) var(--field-origin) / var(--field-size) repeat;
+    background:var(--field-art) var(--field-origin) / var(--field-size) repeat;
+    mask:linear-gradient(112deg,transparent 37%,#000 50%,transparent 63%) 120% center / 260% 100% no-repeat;
     opacity:var(--field-light);
     animation:field-sweep 13s ease-in-out infinite;
   }
   .resume-band .field-pattern::after { animation-delay:-4s; }
   .contact .field-pattern::after { animation-delay:-7s; }
   @keyframes field-sweep {
-    0% { background-position:120% center; }
-    85%,100% { background-position:-20% center; }
+    0% { mask-position:120% center; }
+    85%,100% { mask-position:-20% center; }
   }
 }
 @media screen and (max-width:700px) {
