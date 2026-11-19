@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>歷年成績與課表｜林柏翰</title>
+<script>
+  const knownSection = /^#(?:term|schedule|grades)-(?:115-1|114-2|114-1)$/.test(location.hash);
+  location.replace('index.html' + (knownSection ? location.hash : '#academics'));
+</script>
+</head><body><p><a href="index.html#academics">前往履歷首頁的歷年成績與課表</a></p></body></html>

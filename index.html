@@ -5,38 +5,49 @@
 <title>林柏翰｜個人履歷與作品</title>
 <meta name="description" content="臺科大資工系林柏翰的大學部專題申請履歷。收錄物件導向課程作品、機器人競賽程式與個人學經歷。">
 <meta name="theme-color" content="#f3edf7">
+
+<script src="js/take-art.js" defer></script>
+<script src="js/window-catalog.js" defer></script>
+<script src="js/blue-flight.js" defer></script>
+<script src="js/reference-scenes.js" defer></script>
+<script src="js/chess-film.js" defer></script>
+<script src="js/take-player.js" defer></script>
 <link rel="icon" href="images/avatar.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/site.css">
 <link rel="stylesheet" href="css/gallery.css">
 <link rel="stylesheet" href="css/background.css">
 <link rel="stylesheet" href="css/collection.css">
 <link rel="stylesheet" href="css/profile-sections.css">
-<link rel="preload" href="assets/NotoSansTC.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="css/schedule.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/takes.css">
+<link rel="stylesheet" href="css/portrait.css">
+<link rel="stylesheet" href="css/take-themes.css">
 </head>
 <body>
+<dialog id="take-menu" aria-labelledby="menu-title">
+  <div class="menu-sheet"><header><div><p>林柏翰 ／ 履歷試映</p><h1 id="menu-title">選一段開場</h1></div><button type="button" id="menu-dismiss">直接看履歷</button></header>
+  <div class="take-grid"><button type="button" class="take-card" data-take="world"><span class="poster"><img src="assets/intro/world-still.webp" width="640" height="304" alt=""><span class="play-icon" aria-hidden="true">▷</span></span><span class="card-line"><strong>棋界彼端</strong><small>7.6 秒</small></span><span class="card-detail">白從懷中拋出棋子，鏡頭隨它飛入星空</span></button><button type="button" class="take-card" data-take="signal"><span class="poster"><img src="assets/intro/signal-still.webp" width="640" height="304" alt=""><span class="play-icon" aria-hidden="true">▷</span></span><span class="card-line"><strong>訊息匯流</strong><small>5.2 秒</small></span><span class="card-detail">作品訊息匯成姓名，落回履歷首頁</span></button><button type="button" class="take-card" data-take="network"><span class="poster"><img src="assets/intro/network-still.webp" width="640" height="304" alt=""><span class="play-icon" aria-hidden="true">▷</span></span><span class="card-line"><strong>藍域漫遊</strong><small>6.5 秒</small></span><span class="card-detail">從機器人競賽出發，穿過作品窗群</span></button><button type="button" class="take-card" data-take="link"><span class="poster"><img src="assets/intro/link-still.webp" width="640" height="304" alt=""><span class="play-icon" aria-hidden="true">▷</span></span><span class="card-line"><strong>Link Start</strong><small>3.7 秒</small></span><span class="card-detail">穿過彩色光柱，登入履歷</span></button></div></div></dialog>
+<dialog id="take-screen" aria-label="開場動畫"><canvas aria-hidden="true"></canvas><button id="skip-take" type="button" autofocus>跳過開場</button></dialog>
+<div id="flight-page">
 <div class="gallery-backdrop" aria-hidden="true"><span class="field-pattern" aria-hidden="true"></span></div>
 <a class="skip-link" href="#main">跳到主要內容</a>
 <div class="reading-progress" aria-hidden="true"></div>
 <header class="site-nav"><a class="brand" href="#top"><span aria-hidden="true">林</span>林柏翰<small>PORTFOLIO</small></a><nav aria-label="主要導覽"><a href="#about">關於我</a><a href="#projects">作品</a><a href="#resume">學經歷</a><a href="#skills">技能</a><a href="#awards">競賽</a><a href="#contact">聯絡</a></nav></header>
 <main id="main">
 <section class="hero shell" id="top" aria-labelledby="hero-title">
-<div class="hero-circuit" aria-hidden="true">
-  <svg viewBox="0 0 310 260" fill="none" focusable="false" stroke-linecap="round" stroke-linejoin="round">
-    <defs><path id="logic-wire" d="M75 65H97L123 91V119H150M196 126H224L246 148V174"/></defs>
-    <use href="#logic-wire" stroke="#a085b2" stroke-width="1.5"/>
-    <use class="circuit-signal" href="#logic-wire" stroke="#825490" stroke-width="3"/>
-  </svg>
-</div>
+<div class="theme-art" aria-hidden="true"></div>
 <div class="hero-copy">
   <p class="eyebrow">賴祐吉教授實驗室 · 大學部專題申請</p>
-  <h1 id="hero-title">林柏翰</h1>
+  <h1 id="hero-title" tabindex="-1"><span class="hero-signature">林柏翰</span></h1>
   <p class="identity">國立臺灣科技大學<br class="mobile-break"> 資訊工程系 · 二年級乙班</p>
   <p class="hero-statement">我想做出能自主行動、<br>與玩家互動的虛擬角色。</p>
   <p class="hero-intent"><span>在老師的物件導向課，</span><span>我用 C++ 寫象棋與拼圖。</span></p>
   <div class="hero-actions"><a class="button primary" href="resume.html">閱讀簡歷</a><a class="button secondary" href="#projects">瀏覽作品</a></div>
   <div class="hero-email email-pair"><a href="mailto:b11430236@mail.ntust.edu.tw">b11430236@mail.ntust.edu.tw</a><a href="mailto:hank117012@gmail.com">hank117012@gmail.com</a></div>
 </div>
-<div class="hero-visual"><div class="portrait-frame"><img id="portrait" src="images/avatar.svg" alt="個人頭像預留位置" width="320" height="360"><span>林柏翰 / PORTFOLIO</span></div><div class="hero-award"><span>第 54 屆<span class="award-event-name">全國技能競賽</span></span><strong>第 1 名</strong><small>青年組機器人職類</small></div></div>
+<div class="hero-visual"><div class="profile-orbit"><img id="portrait" src="images/avatar.svg" alt="個人頭像預留位置" width="320" height="360"></div><div class="hero-award"><span>第 54 屆<span class="award-event-name">全國技能競賽</span></span><strong>第 1 名</strong><small>青年組機器人職類</small></div></div>
+<div class="take-actions" hidden><button id="replay-take" type="button">重播開場</button><button id="choose-take" type="button">換款試映</button></div>
 
 </section>
 <section class="shell section" id="about" aria-labelledby="about-title"><div class="section-title reveal"><div><h2 id="about-title">關於我</h2></div></div>
@@ -55,8 +66,8 @@
     </div>
   </article>
 </div>
-<article class="competition-note reveal">
-  <div class="competition-copy"><p class="competition-status">已入圍決賽</p><h3>2026 行動通訊實務競賽</h3><p>團隊已提交參賽企畫書。</p></div>
+<article class="competition-note reveal" id="competition-2026">
+  <div class="competition-copy"><p class="competition-status ongoing-status">已入圍決賽</p><h3>2026 行動通訊實務競賽</h3><p>團隊已提交參賽企畫書。</p></div>
   <div class="competition-date"><span>決賽日期</span><time datetime="2026-12-12">2026 年 12 月 12 日</time></div>
   <a class="text-link" href="https://mcpc-2026-nchu.web.app/" target="_blank" rel="noopener noreferrer">競賽官網</a>
 </article>
@@ -65,7 +76,101 @@
   <button type="button" data-view="cards" aria-pressed="true" aria-controls="project-grid"><span class="view-icon icon-cards" aria-hidden="true"></span>圖卡</button>
   <button type="button" data-view="catalog" aria-pressed="false" aria-controls="project-grid"><span class="view-icon icon-catalog" aria-hidden="true"></span>目錄</button>
 </div></div><p id="filter-status" role="status" aria-live="polite"></p><div id="project-grid" class="project-grid"></div><div class="more-wrap"><button class="button secondary" type="button" id="show-more">展開其餘作品 <span aria-hidden="true">＋</span></button></div><noscript><p>作品互動需要 JavaScript。可先閱讀<a href="resume.html">簡歷版</a>，了解求學背景與代表成果。</p></noscript></section>
-<section class="resume-band" id="resume"><span class="field-pattern" aria-hidden="true"></span><div class="shell section"><div class="section-title reveal"><div><h2>學歷與校園經歷</h2></div><a class="text-link" href="resume.html">完整簡歷 ↗</a></div><div class="resume-grid"><div class="timeline"><article class="timeline-item reveal" aria-current="step"><span class="timeline-label">現在 · 大二</span><h3>國立臺灣科技大學</h3><p class="timeline-degree">資訊工程系 · 二年級乙班</p><p>經技優保送入學，由大一不分系丙班分流至資工系。</p></article><article class="timeline-item reveal"><span class="timeline-label">大一下</span><h3>物件導向程式設計與實習</h3><p class="timeline-degree">授課教師：賴祐吉教授</p><p>用 C++ 拆分棋盤與規則模組，實作拼圖的旋轉與解題提示。</p><button class="inline-button" type="button" data-open-project="puzzle">查看課程作品 ↗</button></article><article class="timeline-item reveal"><span class="timeline-label">高中</span><h3>國立基隆商工 · 資訊科</h3><p>修習程式設計、數位邏輯與單晶片實作，參加機器人及手機應用競賽。</p></article></div><aside class="activities reveal"><h3>校園參與與表達</h3><div><h4>班級與學生自治</h4><p>班長、副班長、實習股長、學生會班級代表。</p></div><div><h4>科學創客社</h4><p>擔任活動組組長。</p></div><div><h4>多元學習</h4><p>參與領導人才培訓、資安體驗，也透過閱讀心得寫作練習整理觀點。</p></div></aside></div></div></section>
+<section class="resume-band" id="resume"><span class="field-pattern" aria-hidden="true"></span><div class="shell section"><div class="section-title reveal"><div><h2>學歷與校園經歷</h2></div><a class="text-link" href="resume.html">完整簡歷 ↗</a></div><div class="resume-grid"><div class="timeline"><article class="timeline-item reveal" aria-current="step"><span class="timeline-label">現在 · 大二</span><h3>國立臺灣科技大學</h3><p class="timeline-degree">資訊工程系 · 二年級乙班</p><p>大一經技優保送進入不分系丙班，大二分流至資訊工程系。</p>
+<dl class="degree-details">
+  <dt>雙主修</dt><dd>企業管理系</dd>
+  <dt>輔系</dt><dd>財務金融學士學位學程</dd>
+</dl><a class="schedule-entry" href="#academics" aria-haspopup="dialog" aria-controls="academics">查看歷年成績與課表</a></article><article class="timeline-item reveal"><span class="timeline-label">大一下</span><h3>物件導向程式設計與實習</h3><p class="timeline-degree">授課教師：賴祐吉教授</p><p>用 C++ 拆分棋盤與規則模組，實作拼圖的旋轉與解題提示。</p><button class="inline-button" type="button" data-open-project="puzzle">查看課程作品 ↗</button></article><article class="timeline-item reveal"><span class="timeline-label">高中</span><h3>國立基隆商工 · 資訊科</h3><p>修習程式設計、數位邏輯與單晶片實作，參加機器人及手機應用競賽。</p></article></div><aside class="activities reveal"><h3>校園參與與表達</h3><div><h4>班級與學生自治</h4><p>曾任班長、副班長、學藝股長與實習股長，也擔任過學生會班級代表。</p></div><div><h4>科學創客社</h4><p>擔任活動組組長。</p></div><div><h4>多元學習</h4><p>參與領導人才培訓、資安體驗，也透過閱讀心得寫作練習整理觀點。</p></div></aside></div></div></section>
+<section id="academics" aria-labelledby="academics-title">
+  <header class="dialog-toolbar academic-toolbar">
+    <div><h2 id="academics-title" tabindex="-1" autofocus>歷年成績與課表</h2><time datetime="2026-11-19">更新於 2026.11.19</time></div>
+    <a class="close-button" href="#resume" data-close-academics aria-label="關閉歷年成績與課表">關閉 <span aria-hidden="true">×</span></a>
+  </header>
+  <div class="academic-content">
+  <div class="academic-summary">
+    <div class="academic-average"><span>歷年平均</span><strong>4.08</strong></div>
+    <p class="academic-rank"><span>大一不分系 · 截至 114-2</span><strong><span>歷年班排第 1 名</span> <span>系排第 8 名</span></strong></p>
+    <dl class="academic-credits"><div><dt>已取得學分</dt><dd>47</dd></div><div><dt>修習中學分</dt><dd>31</dd></div></dl>
+  </div>
+  <div class="academic-browser">
+    <nav class="terms" aria-label="選擇學期">
+      <p>學期</p>
+      <a href="#term-115-1"><strong>大二上</strong><span><span class="current-term-code">115-1 · </span>本學期</span></a>
+      <a href="#term-114-2"><strong>大一下</strong><span>114-2</span></a>
+      <a href="#term-114-1"><strong>大一上</strong><span>114-1</span></a>
+    </nav>
+    <div class="academic-panels">
+<section class="term" id="term-115-1" aria-labelledby="title-115-1">
+<header class="term-heading"><h3 id="title-115-1">115 學年度第一學期</h3><p>12 門課<span>·</span>31 學分</p></header>
+<div class="view-switch" role="group" aria-label="課表或成績" hidden><button type="button" data-academic-view="schedule">週間課表</button><button type="button" data-academic-view="grades">學期成績</button></div>
+<div class="schedule-view" hidden></div>
+<div class="grade-view" id="grades-115-1">
+<p class="pending-note">本學期修習中。成績查詢系統於 2026 年 11 月 19 日列示各科為「成績未到」。</p>
+<table class="course-table"><caption>逐科修課紀錄</caption><thead><tr><th scope="col">課程名稱</th><th scope="col">學分</th><th scope="col">成績</th><th scope="col" class="meeting-column">上課時段</th></tr></thead><tbody>
+<tr data-code="BA2208301"><th scope="row"><span class="course-name">成本會計</span><small>BA2208301</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="2" data-start="2" data-end="4" data-room="TR-617">週二 2–4 節 · TR-617</span></td></tr>
+<tr data-code="BA305A001"><th scope="row"><span class="course-name">統計學（上）</span><small>BA305A001</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="3" data-start="6" data-end="8" data-room="HHC-H205">週三 6–8 節 · HHC-H205</span></td></tr>
+<tr data-code="BA4409701"><th scope="row"><span class="course-name">證券管理</span><small>BA4409701</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="4" data-start="8" data-end="10" data-room="TR-512">週四 8–10 節 · TR-512</span></td></tr>
+<tr data-code="BA4711302"><th scope="row"><span class="course-name">管理與企業倫理</span><small>BA4711302</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="2" data-start="6" data-end="8" data-room="IB-502">週二 6–8 節 · IB-502</span></td></tr>
+<tr data-code="CS2002302"><th scope="row"><span class="course-name">資料結構</span><small>CS2002302</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="1" data-start="3" data-end="4" data-room="TR-409-2">週一 3–4 節 · TR-409-2</span><span data-day="3" data-start="4" data-end="4" data-room="TR-212">週三 4 節 · TR-212</span></td></tr>
+<tr data-code="CS2022301"><th scope="row"><span class="course-name">數位系統設計</span><small>CS2022301</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="3" data-start="2" data-end="2" data-room="TR-313">週三 2 節 · TR-313</span><span data-day="4" data-start="6" data-end="7" data-room="TR-313">週四 6–7 節 · TR-313</span></td></tr>
+<tr data-code="CS3004302"><th scope="row"><span class="course-name">計算機網路概論</span><small>CS3004302 · 英語授課</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="1" data-start="1" data-end="2" data-room="TR-309">週一 1–2 節 · TR-309</span><span data-day="3" data-start="3" data-end="3" data-room="TR-214">週三 3 節 · TR-214</span></td></tr>
+<tr data-code="ECG003301"><th scope="row"><span class="course-name">台灣電資產業論壇與工程倫理</span><small>ECG003301 · 通識 B（當代文明）</small></th><td>2</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="4" data-start="A" data-end="C" data-room="RB-105">週四 A–C 節 · RB-105</span></td></tr>
+<tr data-code="FB1102701"><th scope="row"><span class="course-name">經濟學</span><small>FB1102701</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="4" data-start="2" data-end="4" data-room="IB-607">週四 2–4 節 · IB-607</span></td></tr>
+<tr data-code="FB3602701"><th scope="row"><span class="course-name">基礎理財規劃實務</span><small>FB3602701</small></th><td>3</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="5" data-start="7" data-end="9" data-room="TR-409-2">週五 7–9 節 · TR-409-2</span></td></tr>
+<tr data-code="FE1151705"><th scope="row"><span class="course-name">文法與修辭</span><small>FE1151705</small></th><td>2</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="1" data-start="9" data-end="10" data-room="IB-501">週一 9–10 節 · IB-501</span></td></tr>
+<tr data-code="PE115A012"><th scope="row"><span class="course-name">體育（排球）（上）</span><small>PE115A012</small></th><td>0</td><td class="grade">成績未到</td><td class="meeting-column"><span data-day="1" data-start="6" data-end="7">週一 6–7 節</span></td></tr>
+</tbody></table></div></section>
+<section class="term" id="term-114-2" aria-labelledby="title-114-2">
+<header class="term-heading"><h3 id="title-114-2">114 學年度第二學期</h3><p>10 門課<span>·</span>23 學分</p></header>
+<div class="view-switch" role="group" aria-label="課表或成績" hidden><button type="button" data-academic-view="schedule">週間課表</button><button type="button" data-academic-view="grades">學期成績</button></div>
+<div class="schedule-view" hidden></div>
+<div class="grade-view" id="grades-114-2">
+<table class="rank-table"><caption>學期與歷年排名</caption><thead><tr><th scope="col">範圍</th><th scope="col">平均成績</th><th scope="col">班排</th><th scope="col">系排</th></tr></thead><tbody>
+<tr><th scope="row">本學期</th><td>4.07</td><td>第 1 名</td><td>第 10 名</td></tr>
+<tr><th scope="row">累計至本學期</th><td>4.08</td><td>第 1 名</td><td>第 8 名</td></tr>
+</tbody></table>
+<table class="course-table"><caption>逐科修課紀錄</caption><thead><tr><th scope="col">課程名稱</th><th scope="col">學分</th><th scope="col">成績</th><th scope="col" class="meeting-column">上課時段</th></tr></thead><tbody>
+<tr data-code="CC101B021"><th scope="row"><span class="course-name">英文字彙與閱讀（下）</span><small>CC101B021</small></th><td>2</td><td class="grade">A+</td><td class="meeting-column"><span data-day="3" data-start="1" data-end="2">週三 1–2 節</span></td></tr>
+<tr data-code="CC105B031"><th scope="row"><span class="course-name">英語口語訓練（下）</span><small>CC105B031</small></th><td>2</td><td class="grade">A</td><td class="meeting-column"><span data-day="3" data-start="3" data-end="4">週三 3–4 節</span></td></tr>
+<tr data-code="CC1257305"><th scope="row"><span class="course-name">新生中文說寫專題</span><small>CC1257305</small></th><td>3</td><td class="grade">A</td><td class="meeting-column"><span data-day="5" data-start="2" data-end="4">週五 2–4 節</span></td></tr>
+<tr data-code="CS1006302"><th scope="row"><span class="course-name">線性代數</span><small>CS1006302</small></th><td>3</td><td class="grade">A+</td><td class="meeting-column"><span data-day="1" data-start="3" data-end="4">週一 3–4 節</span><span data-day="4" data-start="2" data-end="2">週四 2 節</span></td></tr>
+<tr data-code="CS1010302"><th scope="row"><span class="course-name">物件導向程式設計實習</span><small>CS1010302</small></th><td>1</td><td class="grade">A+</td><td class="meeting-column"><span data-day="4" data-start="6" data-end="8">週四 6–8 節</span></td></tr>
+<tr data-code="CS3005302"><th scope="row"><span class="course-name">物件導向程式設計</span><small>CS3005302</small></th><td>3</td><td class="grade">B</td><td class="meeting-column"><span data-day="2" data-start="6" data-end="8">週二 6–8 節</span></td></tr>
+<tr data-code="GE3725301"><th scope="row"><span class="course-name">消費者保護法</span><small>GE3725301 · 通識 E（群己與制度發展）</small></th><td>2</td><td class="grade">A+</td><td class="meeting-column"><span data-day="4" data-start="3" data-end="4">週四 3–4 節</span></td></tr>
+<tr data-code="HC162B001"><th scope="row"><span class="course-name">微積分（下）</span><small>HC162B001</small></th><td>4</td><td class="grade">A+</td><td class="meeting-column"><span data-day="1" data-start="8" data-end="10">週一 8–10 節</span><span data-day="5" data-start="6" data-end="7">週五 6–7 節</span></td></tr>
+<tr data-code="MIG002301"><th scope="row"><span class="course-name">物聯網導論</span><small>MIG002301 · 通識 B（當代文明）</small></th><td>3</td><td class="grade">A+</td><td class="meeting-column"><span data-day="3" data-start="A" data-end="C">週三 A–C 節</span></td></tr>
+<tr data-code="PE112B041"><th scope="row"><span class="course-name">體育（羽球）（下）</span><small>PE112B041</small></th><td>0</td><td class="grade">A</td><td class="meeting-column"><span data-day="4" data-start="9" data-end="10">週四 9–10 節</span></td></tr>
+</tbody></table></div></section>
+<section class="term" id="term-114-1" aria-labelledby="title-114-1">
+<header class="term-heading"><h3 id="title-114-1">114 學年度第一學期</h3><p>10 門課<span>·</span>24 學分</p></header>
+<div class="view-switch" role="group" aria-label="課表或成績" hidden><button type="button" data-academic-view="schedule">週間課表</button><button type="button" data-academic-view="grades">學期成績</button></div>
+<div class="schedule-view" hidden></div>
+<div class="grade-view" id="grades-114-1">
+<table class="rank-table"><caption>學期與歷年排名</caption><thead><tr><th scope="col">範圍</th><th scope="col">平均成績</th><th scope="col">班排</th><th scope="col">系排</th></tr></thead><tbody>
+<tr><th scope="row">本學期</th><td>4.09</td><td>第 1 名</td><td>第 7 名</td></tr>
+<tr><th scope="row">累計至本學期</th><td>4.09</td><td>第 1 名</td><td>第 7 名</td></tr>
+</tbody></table>
+<table class="course-table"><caption>逐科修課紀錄</caption><thead><tr><th scope="col">課程名稱</th><th scope="col">學分</th><th scope="col">成績</th><th scope="col" class="meeting-column">上課時段</th></tr></thead><tbody>
+<tr data-code="CC101A021"><th scope="row"><span class="course-name">英文字彙與閱讀（上）</span><small>CC101A021</small></th><td>2</td><td class="grade">A+</td><td class="meeting-column"><span data-day="3" data-start="1" data-end="2">週三 1–2 節</span></td></tr>
+<tr data-code="CC105A031"><th scope="row"><span class="course-name">英語口語訓練（上）</span><small>CC105A031</small></th><td>2</td><td class="grade">B+</td><td class="meeting-column"><span data-day="3" data-start="3" data-end="4">週三 3–4 節</span></td></tr>
+<tr data-code="CC1253302"><th scope="row"><span class="course-name">表達與文學閱讀</span><small>CC1253302</small></th><td>3</td><td class="grade">A+</td><td class="meeting-column"><span data-day="5" data-start="2" data-end="4">週五 2–4 節</span></td></tr>
+<tr data-code="CS1003302"><th scope="row"><span class="course-name">計算機程式設計</span><small>CS1003302 · 英語授課</small></th><td>3</td><td class="grade">A</td><td class="meeting-column"><span data-day="3" data-start="6" data-end="8">週三 6–8 節</span></td></tr>
+<tr data-code="CS1005301"><th scope="row"><span class="course-name">資訊工程導論</span><small>CS1005301</small></th><td>3</td><td class="grade">A</td><td class="meeting-column"><span data-day="5" data-start="8" data-end="10">週五 8–10 節</span></td></tr>
+<tr data-code="CS3003301"><th scope="row"><span class="course-name">離散數學</span><small>CS3003301</small></th><td>3</td><td class="grade">A+</td><td class="meeting-column"><span data-day="3" data-start="9" data-end="9">週三 9 節</span><span data-day="4" data-start="3" data-end="4">週四 3–4 節</span></td></tr>
+<tr data-code="HC162A001"><th scope="row"><span class="course-name">微積分（上）</span><small>HC162A001</small></th><td>4</td><td class="grade">A+</td><td class="meeting-column"><span data-day="1" data-start="8" data-end="10">週一 8–10 節</span><span data-day="5" data-start="6" data-end="7">週五 6–7 節</span></td></tr>
+<tr data-code="PE112A041"><th scope="row"><span class="course-name">體育（羽球）（上）</span><small>PE112A041</small></th><td>0</td><td class="grade">A-</td><td class="meeting-column"><span data-day="4" data-start="9" data-end="10">週四 9–10 節</span></td></tr>
+<tr data-code="TCG034301"><th scope="row"><span class="course-name">文學與電影</span><small>TCG034301 · 通識 C（美感與人生探索）</small></th><td>2</td><td class="grade">A</td><td class="meeting-column"><span data-day="4" data-start="A" data-end="C">週四 A–C 節</span></td></tr>
+<tr data-code="TCG142302"><th scope="row"><span class="course-name">印花設計中的文化表象</span><small>TCG142302 · 通識 C（美感與人生探索）</small></th><td>2</td><td class="grade">A</td><td class="meeting-column"><span data-day="1" data-start="6" data-end="7">週一 6–7 節</span></td></tr>
+</tbody></table></div></section>
+    </div>
+  </div>
+  <dialog id="course-dialog" closedby="any" aria-labelledby="course-dialog-title">
+    <div class="course-dialog-bar"><span id="course-term"></span><form method="dialog"><button aria-label="關閉課程詳情">關閉</button></form></div>
+    <div class="course-dialog-body"><p id="course-code"></p><h2 id="course-dialog-title"></h2>
+    <dl id="course-facts"></dl><h3>上課時段</h3><ul id="course-meetings"></ul></div>
+  </dialog>
+  </div>
+</section>
 <section class="skills-band" id="skills" aria-labelledby="skills-title"><span class="field-pattern" aria-hidden="true"></span><div class="shell section"><div class="section-title reveal"><div><h2 id="skills-title">技能與證照</h2></div></div><div class="skills-layout"><div class="skill-links"><button type="button" data-open-project="puzzle" class="skill-item reveal"><span class="skill-code">C / C++</span><span><strong>程式邏輯與遊戲實作</strong><small>文字戰鬥、象棋、積木拼圖</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="triangle" class="skill-item reveal"><span class="skill-code">LabVIEW</span><span><strong>機器人程式與控制</strong><small>技能競賽、警示裝置、照護原型</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="app" class="skill-item reveal"><span class="skill-code">App Inventor</span><span><strong>手機遊戲程式開發</strong><small>關卡、頭目戰、商店與觸控</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="dice" class="skill-item reveal"><span class="skill-code">Hardware</span><span><strong>數位邏輯與硬體實作</strong><small>CPLD、介面卡、基礎 3D 建模</small></span><span aria-hidden="true">↗</span></button></div><div class="cert-panel"><div class="cert-heading"><h3>專業技術士證照</h3></div><div id="certificate-list"></div></div></div></div></section>
 <section class="shell section" id="awards"><div class="section-title reveal"><div><h2>競賽與獲獎</h2></div></div><div class="awards-layout"><article class="honor-feature reveal">
   <h3>第 54 屆全國技能競賽</h3>
@@ -79,6 +184,7 @@
 <div class="contact-buttons"><a class="button primary" href="mailto:b11430236@mail.ntust.edu.tw?subject=大學部專題面談">寫信給柏翰</a><button type="button" class="button secondary" id="copy-email">複製臺科大信箱</button></div><p id="phone-row" hidden>手機 <span id="phone-value"></span></p><p id="github-row" hidden><a id="github-link" rel="noopener noreferrer" target="_blank">GitHub ↗</a></p></div></section>
 </main>
 <footer class="shell site-footer"><span>林柏翰 · 個人履歷與作品</span><span>更新於 2026.11</span><a href="#top">回到頁首 ↑</a></footer>
+</div>
 <div id="toast" role="status" aria-live="polite"></div>
 <dialog id="project-dialog" aria-labelledby="detail-title"><div class="dialog-toolbar"><span class="detail-context"></span><a class="detail-resume-link" href="resume.html#work" hidden>回到簡歷</a><button type="button" class="close-button" data-close="project-dialog" aria-label="關閉作品詳情">關閉 ×</button></div><div id="detail-content"></div></dialog>
 <dialog id="image-dialog" aria-labelledby="image-title"><div class="dialog-toolbar"><h2 id="image-title">作品圖片</h2><button type="button" class="close-button" data-close="image-dialog" aria-label="關閉放大圖片">關閉 ×</button></div><div class="lightbox-stage" aria-busy="false"><div id="image-viewport" tabindex="0" role="region" aria-label="作品圖片，放大後可拖曳或捲動查看"><div id="image-canvas"><img id="large-image" alt="" draggable="false"></div></div><p id="image-error" hidden>圖片暫時無法載入，請切換其他圖片。</p></div><div class="image-description"><p id="image-caption"></p><p id="image-hint">點選放大，可查看圖片細節</p></div><div class="lightbox-controls"><button type="button" class="button secondary" id="previous-image" aria-label="上一張圖片">← 上一張</button><div class="image-tools"><span id="image-counter" aria-live="polite"></span><button type="button" id="zoom-image" aria-pressed="false">放大 2×</button></div><button type="button" class="button secondary" id="next-image" aria-label="下一張圖片">下一張 →</button></div></dialog>
@@ -99,4 +205,5 @@
   </div>
 </template>
 <script src="js/profile.js"></script><script src="js/profile-view.js"></script><script src="js/content.js"></script><script src="js/site.js"></script><script src="js/puzzle-preview.js"></script>
+<script src="js/schedule.js"></script>
 </body></html>

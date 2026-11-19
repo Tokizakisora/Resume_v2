@@ -439,7 +439,7 @@
       observer.observe(element);
     });
   }
-  const navigation = $$('.site-nav nav a');
+  const navigation = $$('.site-nav nav a:not([aria-haspopup="dialog"])');
   const sections = navigation.map(link => $(link.getAttribute('href')));
   let scheduled = false;
   function updateScroll() {
@@ -472,7 +472,7 @@
     if (projects.some(project => project.id === projectId)) {
       if (new URLSearchParams(location.search).get('from') === 'resume') {
         const returnLink = $('.detail-resume-link', projectDialog);
-        returnLink.href = 'resume.html#cv-' + projectId;
+        returnLink.href = window.galleryTakeURL('resume.html#cv-' + projectId);
         returnLink.hidden = false;
         projectDialog.addEventListener('close', () => { returnLink.hidden = true; }, {once:true});
       }
