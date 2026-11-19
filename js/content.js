@@ -3,9 +3,23 @@ window.portfolioData = {
   updated: '2026.11',
   projects: [
     {
+      id: 'puzzle', category: 'game', era: '大一課程 · 2026', tools: ['C++', '物件導向', 'DFS'],
+      title: '積木拼圖與解題提示', subtitle: '把形狀、旋轉與盤面限制，拆成可處理的程式邏輯。',
+      cover: 'images/projects/cpp-puzzle.svg', mediaType: '程式邏輯示意', theme: 'cream', featured: true,
+      summary: '物件導向程式設計實習專案。支援關卡讀取、零件旋轉與放置，以及解答預覽和提示。',
+      contribution: '大一修習賴祐吉教授物件導向課程期間的小組專案，我負責程式開發。',
+      details: [
+        ['資料與物件', '以 Board、Part 與 PartLocation 表達盤面、零件形狀與放置狀態，從檔案讀取關卡限制。'],
+        ['座標轉換', '零件可進行 0、90、180、270 度旋轉，再把座標平移對齊到左上角，供放置檢查使用。'],
+        ['搜尋與提示', '使用深度優先搜尋嘗試零件位置，檢查盤面與顏色數量限制，儲存可用解答並提供提示。']
+      ],
+      note: '封面依原始程式繪製，呈現邏輯概念，不是原程式的執行截圖。',
+      images: [['images/projects/cpp-puzzle.svg', '積木拼圖的旋轉、限制檢查與搜尋概念示意']]
+    },
+    {
       id: 'triangle', category: 'robot', era: '高中競賽', tools: ['LabVIEW', '感測與控制'],
       title: '三角警示預警系統', subtitle: '讓警示裝置移動，降低人員暴露在車道上的風險。',
-      cover: 'images/projects/triangle-robot.png', mediaType: '實體作品', theme: 'lilac', featured: true,
+      cover: 'images/projects/triangle-robot.png', mediaType: '實體作品', theme: 'lilac',
       summary: '以攝影機判斷路肩白線角度，搭配全向輪、陀螺儀與超音波感測，串接校正、移動與警示流程。',
       contribution: '我負責 LabVIEW 程式開發，將感測訊號、方向校正與移動控制整合為裝置的執行流程。',
       details: [
@@ -18,20 +32,6 @@ window.portfolioData = {
         ['images/projects/triangle-robot.png', '三角警示裝置的實物正面，包含 LED、攝影機、全向輪與超音波感測器'],
         ['images/projects/triangle-robot-rear.png', '裝置側背面與控制元件']
       ]
-    },
-    {
-      id: 'puzzle', category: 'game', era: '大一課程 · 2026', tools: ['C++', '物件導向', 'DFS'],
-      title: '積木拼圖與解題提示', subtitle: '把形狀、旋轉與盤面限制，拆成可處理的程式邏輯。',
-      cover: 'images/projects/cpp-puzzle.svg', mediaType: '程式邏輯示意', theme: 'cream',
-      summary: '物件導向程式設計實習專案。支援關卡讀取、零件旋轉與放置，以及解答預覽和提示。',
-      contribution: '大一修習賴祐吉教授物件導向課程期間的小組專案，我負責程式開發。',
-      details: [
-        ['資料與物件', '以 Board、Part 與 PartLocation 表達盤面、零件形狀與放置狀態，從檔案讀取關卡限制。'],
-        ['座標轉換', '零件可進行 0、90、180、270 度旋轉，再把座標平移對齊到左上角，供放置檢查使用。'],
-        ['搜尋與提示', '使用深度優先搜尋嘗試零件位置，檢查盤面與顏色數量限制，儲存可用解答並提供提示。']
-      ],
-      note: '封面依原始程式繪製，呈現邏輯概念，不是原程式的執行截圖。',
-      images: [['images/projects/cpp-puzzle.svg', '積木拼圖的旋轉、限制檢查與搜尋概念示意']]
     },
     {
       id: 'app', category: 'game', era: '高中競賽 · 2023', tools: ['App Inventor', '遊戲邏輯'],
@@ -102,7 +102,7 @@ window.portfolioData = {
     },
     {
       id: 'robot', category: 'robot', era: '高中技能競賽', tools: ['LabVIEW', '反覆測試'],
-      title: '機器人競賽程式', subtitle: '在實際機構上，反覆調整動作與控制流程。',
+      title: '機器人技能競賽', subtitle: '在實際機構上，反覆調整動作與控制流程。',
       cover: 'images/projects/robot-control.svg', mediaType: '控制流程示意', theme: 'cream',
       summary: '參與全國技能競賽青年組機器人職類，負責 LabVIEW coding，累積程式與實機整合經驗。',
       contribution: '我負責 LabVIEW 程式開發。備賽時與隊友針對不流暢的機器人動作進行測試和調整。',
@@ -146,16 +146,30 @@ window.portfolioData = {
   ],
   awards: [
     {group:'技能競賽', title:'第 54 屆全國技能競賽', detail:'青年組機器人職類', result:'第一名'},
-    {group:'技能競賽', title:'第 54 屆北區分區技能競賽', detail:'青年組機器人職類', result:'第二名'},
-    {group:'技能競賽', title:'全國工業類技藝競賽', detail:'機器人職種', result:'金手獎第五名'},
-    {group:'程式與資料', title:'2023 全國雲端 APP 行動創意應用競賽', detail:'基因狂暴：恐龍復甦', result:'第三名'},
+    {group:'技能競賽', title:'第 54 屆北區分區技能競賽', projectId:'robot', detail:'青年組機器人職類', result:'第二名'},
+    {group:'技能競賽', title:'全國工業類技藝競賽', projectId:'robot', detail:'機器人職種', result:'金手獎第五名'},
+    {group:'程式與資料', title:'2023 全國雲端 APP 行動創意應用競賽', projectId:'app', detail:'基因狂暴：恐龍復甦', result:'第三名'},
     {group:'程式與資料', title:'2023 金象盃全國大數據實務能力競賽', detail:'高中職組', result:'全國第三名'},
     {group:'程式與資料', title:'2023 金象盃北區初賽', detail:'高中職組', result:'特優'},
-    {group:'程式與資料', title:'基隆商工 112 學年度 APP 程式競賽', detail:'校內競賽', result:'第一名'},
+    {group:'程式與資料', title:'基隆商工 112 學年度 APP 程式競賽', projectId:'app', detail:'校內競賽', result:'第一名'},
     {group:'閱讀與表達', title:'全國高級中等學校閱讀心得寫作比賽', detail:'高中期間', result:'特優、甲等 × 2'}
   ],
   certificates: [
     {name:'電腦硬體裝修', levels:['乙級','丙級']}, {name:'數位電子', levels:['乙級']},
     {name:'電腦軟體應用', levels:['丙級']}, {name:'工業電子', levels:['丙級']}, {name:'網路架設', levels:['丙級']}
   ]
+};
+
+// 展示方式與縮圖短標籤；換圖時可同步修改，不影響履歷事實。
+window.portfolioPresentation = {
+  triangle: {kind:'object', labels:['正面原型','側背面']},
+  puzzle: {kind:'diagram', rotationPreview:true, labels:['邏輯示意']},
+  app: {kind:'phone', imageKinds:['phone','interface','interface','interface'], labels:['遊戲畫面','方向判斷','動作程式','流程圖']},
+  care: {kind:'photo', imageKinds:['photo','photo','interface','interface','interface'], labels:['實體原型','夾取測試','護理站','家屬端','訂餐紀錄']},
+  chess: {kind:'diagram', labels:['規則示意']},
+  battle: {kind:'terminal', labels:['戰鬥畫面']},
+  robot: {kind:'diagram', labels:['控制流程']},
+  dice: {kind:'board', labels:['實作板','電路圖']},
+  electronics: {kind:'board', labels:['介面卡','控制畫面']},
+  modeling: {kind:'interface', labels:['手機支架模型']}
 };

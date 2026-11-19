@@ -1,0 +1,259 @@
+/* 學經歷、近期競賽、證照與聯絡資訊。 */
+@media screen {
+  .skills-band {
+    position:relative;
+    isolation:isolate;
+    background:#f3edf7;
+    border-block:1px solid #e6dceb;
+  }
+  .skills-band .field-pattern { --field-ink:.09; --field-light:.12; }
+  .skills-band .skill-links,.skills-band .cert-panel {
+    background:#fffcff;
+    border:1px solid #e1d4e9;
+    border-radius:17px;
+    box-shadow:var(--gallery-shadow);
+  }
+  .skills-band .skill-links { padding-inline:clamp(14px,2vw,24px); min-width:0; }
+  .skills-band .skill-item:last-child { border-bottom:0; }
+  .skills-band .skill-item:focus-visible { outline-offset:-3px; }
+  .competition-note {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto auto;
+    gap:clamp(18px,4vw,54px);
+    align-items:center;
+    padding:clamp(20px,3vw,32px);
+    margin-top:24px;
+    border:1px solid #ddcee5;
+    border-radius:16px;
+    background:linear-gradient(110deg,#f1e8f7,#fcf8f6);
+  }
+  .competition-status {
+    display:inline-block;
+    margin-bottom:6px;
+    padding:2px 9px;
+    border-radius:5px;
+    background:#e3d5ec;
+    color:#573666;
+    font-size:.84rem;
+    font-weight:600;
+  }
+  .competition-copy h3 { font-size:1.14rem; }
+  .competition-copy > p:last-child { color:#65536f; font-size:1rem; }
+  .competition-date { border-inline-start:2px solid #c6a9d5; padding-inline-start:18px; }
+  .competition-date span { display:block; color:#695576; font-size:.86rem; }
+  .competition-date time { font-size:1.1rem; font-weight:600; color:#493453; white-space:nowrap; }
+  .competition-note .text-link,.contact-invitation .text-link {
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+    font-size:.9rem;
+    text-decoration:underline;
+    text-decoration-color:#baa2ca;
+    text-underline-offset:4px;
+  }
+  .timeline-item p,.activities p:not(.eyebrow) { font-size:1rem; line-height:1.85; color:#594e62; }
+  .timeline-item[aria-current="step"]::before {
+    background:#795294;
+    box-shadow:0 0 0 3px #f2ebf7, 0 0 0 5px #cab1da;
+  }
+  .activities > div { max-width:none; }
+  .activities > div + div { border-top:1px solid #eadeee; padding-top:14px; }
+  .activities h4 { font-size:.98rem; color:#50375e; }
+  .cert-heading h3 { font-size:1.17rem; }
+  .credential-level { margin:18px 0 0; }
+  .credential-level h4 {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:8px;
+    font-size:.95rem;
+    color:#644579;
+    border-bottom:1px solid #decee6;
+    padding:0 0 6px;
+  }
+  .credential-level h4 small { font-size:.83rem; font-weight:500; }
+  .credential-level ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px 12px; margin:10px 0 0; }
+  .cert-panel .credential-level li { display:block; padding:3px 0; border:0; font-size:1rem; color:#51455b; }
+  .contact-invitation p { max-width:30em; }
+  #contact .contact-invitation p { font-size:1rem; color:#61516d; }
+  .contact-invitation .text-link { margin-top:6px; }
+  .contact-actions { padding:20px; border:1px solid #decee6; background:#fffdfef2; border-radius:14px; min-width:0; }
+  .contact-email { font-size:clamp(.99rem,1.5vw,1.2rem); }
+  #contact .contact-buttons .button { font-size:.9rem; }
+  .cv-nav { display:flex; flex-wrap:wrap; gap:2px 15px; align-items:center; margin:0 0 20px; border-block:1px solid #e5d9eb; }
+  .cv-nav a { display:inline-flex; align-items:center; min-height:44px; color:#654874; font-size:.9rem; text-underline-offset:4px; text-decoration-color:#c9b0d5; }
+  .resume-sheet section[id] { scroll-margin-top:18px; }
+  .resume-sheet section[id]:focus-visible { outline:2px solid #aa8aba; outline-offset:4px; }
+}
+@media screen and (max-width:700px) {
+  .competition-note { grid-template-columns:minmax(0,1fr) auto; gap:14px 12px; }
+  .competition-copy { grid-column:1/-1; }
+  .competition-date { padding-inline-start:12px; }
+  .competition-date time { font-size:1rem; }
+  .contact-actions { padding:16px; }
+}
+@media screen and (max-width:600px) {
+  .skill-item { grid-template-columns:92px minmax(0,1fr) 1.2em; }
+  .cv-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media screen and (max-width:380px) {
+  .credential-level ul { column-gap:8px; }
+  .contact-actions { padding:13px; }
+  #contact .contact-buttons { gap:6px; }
+}
+@media print {
+  .cv-nav { display:none; }
+}
+
+/* 首頁把申請對象與閱讀簡歷放在同一個視線範圍。 */
+@media screen {
+  .hero-copy > .eyebrow {
+    display:block;
+    font-size:.875rem;
+    letter-spacing:.055em;
+    font-weight:650;
+    color:#654777;
+  }
+  .hero-statement { font-size:clamp(1.18rem,1.6vw,1.5rem); letter-spacing:.015em; }
+  .hero-intent { max-width:26em; font-size:1rem; line-height:1.7; color:#594764; }
+  .hero-actions .button { min-width:7.2rem; font-size:.95rem; }
+  .hero-email { font-size:.875rem; text-underline-offset:4px; }
+  .detail-resume-link { display:inline-flex; align-items:center; flex-shrink:0; min-height:44px; margin-inline-start:auto; color:#654478; font-size:.875rem; }
+  #project-dialog .detail-context { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  #project-dialog .close-button { flex-shrink:0; }
+  .hero-copy > :is(.eyebrow,h1,.identity,.hero-statement,.hero-intent,.hero-actions,.hero-email) { animation:none; }
+}
+@media screen and (prefers-reduced-motion:no-preference) {
+  .timeline-item[aria-current="step"]::before { animation:current-study-pulse 2.8s ease-out infinite; }
+  @keyframes current-study-pulse {
+    0% { box-shadow:0 0 0 3px #f2ebf7, 0 0 0 4px rgb(153 111 179 / .64); }
+    75%,100% { box-shadow:0 0 0 3px #f2ebf7, 0 0 0 10px rgb(153 111 179 / 0); }
+  }
+  .hero-actions .button { transition:box-shadow .18s ease, background .18s ease, border-color .18s ease; }
+  .reveal-ready { transform:translateY(6px); transition-duration:.28s; }
+  .reveal-ready:focus-within { opacity:1; transform:none; transition:none; }
+}
+@media screen and (max-width:600px) {
+  .hero-circuit { top:62px; }
+  .hero-intent { font-size:.96rem; }
+  .hero-actions { margin-top:16px; }
+  .hero-actions .button { min-width:0; }
+  .site-nav nav a { display:inline-flex; align-items:center; justify-content:center; font-size:.875rem; padding-inline:5px; }
+}
+
+/* 簡歷是可獨立閱讀的文件。作品名連到同一份首頁詳情。 */
+@media screen {
+  .resume-tools { max-width:1050px; margin-block:8px; font-size:.875rem; }
+  .resume-tools a,.cv-footer a,.cv-footer button { display:inline-flex; align-items:center; min-height:44px; }
+  .resume-tools a { font-weight:600; text-decoration:underline; text-decoration-color:#bba6c8; }
+  .resume-tools > span { display:inline; font-size:.8125rem; letter-spacing:.025em; color:#705c7c; }
+  .resume-sheet { padding-block-start:clamp(20px,2.5vw,34px); }
+  .resume-sheet > .field-pattern { --field-ink:.06; --field-light:.055; }
+  .resume-header { padding-bottom:16px; border-bottom:1px solid #d6bfdf; }
+  .resume-header .eyebrow { color:#6e4d83; font-size:.83rem; font-weight:600; letter-spacing:.07em; }
+  .resume-header h1 { margin-block:3px; }
+  .resume-header .contacts { font-size:.875rem; margin-top:4px; }
+  .resume-header .contacts a { text-decoration:underline; text-decoration-color:#c0accc; }
+  .resume-sheet .intro { font-size:1rem; line-height:1.8; padding:16px 0; color:#4f405a; }
+  .cv-outline { border-block:1px solid #e4d9ea; margin:0 0 24px; }
+  .cv-outline summary {
+    display:flex; align-items:center; gap:10px; width:fit-content; min-height:44px;
+    color:#664675; font-size:.9rem; font-weight:620; cursor:pointer; list-style:none;
+  }
+  .cv-outline summary::-webkit-details-marker { display:none; }
+  .cv-outline summary::after {
+    content:""; width:.45em; height:.45em; border:solid currentColor; border-width:0 1.5px 1.5px 0;
+    transform:translateY(-2px) rotate(45deg);
+  }
+  .cv-outline[open] summary::after { transform:translateY(2px) rotate(225deg); }
+  .cv-outline summary:focus-visible { outline:2px solid #8859a2; outline-offset:2px; }
+  .cv-outline .cv-nav { border:none; gap:0 4px; margin:0 0 6px; }
+  .cv-nav a { border-radius:6px; padding-inline:9px; text-decoration:none; }
+  .cv-nav a:hover,.cv-nav a:focus-visible { color:#513060; background:#f3ecf6; }
+  .resume-sheet section[id] { scroll-margin-top:20px; }
+  .resume-sheet section[id] > h2 {
+    position:relative; color:#59396b; font-size:1.14rem;
+    border-color:#e5d8eb; padding-block-end:8px; letter-spacing:.035em;
+  }
+  .resume-sheet section[id] > h2::after {
+    content:""; position:absolute; inset:auto auto -1px 0; width:2.25em; height:2px; background:#a982bc; transform-origin:left;
+  }
+  .resume-sheet section[id]:target > h2::after { width:5em; background:#7c519a; }
+  .resume-sheet .work {
+    display:grid; position:relative; grid-template-columns:minmax(0,1fr) auto;
+    gap:2px 18px; align-content:center; padding:15px 1px; margin:0; isolation:isolate;
+  }
+  .work > :not(.work-thumb) { grid-column:1; }
+  .work h3 a { color:#46314f; text-decoration-color:#b39ac2; }
+  .work h3 a::after { content:""; position:absolute; inset:0; border-radius:5px; }
+  .work h3 a:focus-visible { outline:none; }
+  .work h3 a:focus-visible::after { outline:2px solid #875ba0; outline-offset:3px; }
+  .work:focus-within h3 a,.work:hover h3 a { color:#693e80; text-decoration-color:currentColor; }
+  .work .work-thumb {
+    grid-column:2; grid-row:1/4; width:5.6rem; aspect-ratio:1; align-self:center; padding:5px;
+    background:#f6f0f8; border:1px solid #e5dbe9; border-radius:12px; pointer-events:none;
+  }
+  .work-thumb img { display:block; width:100%; height:100%; object-fit:contain; }
+  .work-thumb.work-board { position:relative; overflow:hidden; }
+  .work-board img {
+    position:absolute; left:50%; top:50%; width:206%; height:auto;
+    transform:translate(-26.75%,-54%);
+    clip-path:inset(24% 52.5% 16% 6% round 7px);
+  }
+  .resume-sheet h3 { font-size:1.02rem; }
+  .resume-sheet .work p,.resume-sheet .education p,.resume-sheet section > p,.resume-aside section > p,.resume-aside .skill-list dd {
+    font-size:1rem; color:#51445b; line-height:1.75; text-wrap:pretty;
+  }
+  .resume-sheet .work p { margin:0; }
+  .resume-sheet .work .work-meta { font-size:.81rem; color:#715980; font-weight:550; }
+  .resume-main .cert-list li,.resume-aside .award-list li,.resume-aside .award-list b,.resume-aside .skill-list dt { font-size:.9rem; }
+  .resume-sheet .status,.resume-sheet h3 small,.top-award p { font-size:.81rem; }
+  .resume-sheet .more-work { font-size:.875rem!important; margin-block-start:8px; }
+  .cv-footer { align-items:center; font-size:.875rem; color:#624a72; padding-top:4px; }
+  .cv-footer button { background:none; border:0; font:inherit; color:inherit; text-decoration:underline; text-underline-offset:4px; }
+}
+@media screen and (min-width:861px) {
+  .cv-outline[open] { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .cv-outline[open]::details-content { display:block; }
+  .cv-outline .cv-nav { flex-wrap:wrap; margin:0; }
+}
+@media screen and (max-width:860px) {
+  .cv-desktop-break { display:none; }
+  .cv-outline summary { width:100%; justify-content:space-between; }
+  .cv-outline .cv-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .resume-columns { grid-template-columns:minmax(0,1fr); gap:0; }
+  .resume-aside { border:0; padding:0; }
+  .resume-sheet .intro { padding-block:13px; }
+}
+@media screen and (max-width:600px) {
+  .resume-sheet { padding-inline:clamp(15px,5vw,22px); }
+  .resume-header { gap:10px; }
+  .resume-header .identity { font-size:.9rem; }
+  .resume-header .contacts { font-size:.82rem; }
+  .resume-sheet .work { gap:2px 11px; }
+  .work .work-thumb { width:3.75rem; align-self:start; }
+  .work:has(.work-thumb:not([hidden])) > p:last-of-type { grid-column:1/-1; }
+  .work .work-thumb { grid-row:1/3; }
+}
+@media screen and (prefers-reduced-motion:no-preference) {
+  .cv-outline summary::after { transition:transform .2s; }
+  .resume-sheet section[id]:target > h2::after { animation:cv-rule .44s ease-out; }
+  @keyframes cv-rule { from { transform:scaleX(.4); } to { transform:scaleX(1); } }
+}
+@media print {
+  .cv-outline,.cv-footer,.work-thumb { display:none!important; }
+  .work .work-meta { font-size:7.5pt; margin:0; }
+}
+
+.email-pair { display:inline-flex; flex-wrap:wrap; gap:.15em 1.15em; max-width:100%; }
+.email-pair a { overflow-wrap:anywhere; text-underline-offset:3px; }
+.mail-choice a { display:block; padding:0; border:0; font-size:1rem; color:var(--accent); overflow-wrap:anywhere; }
+.mail-choice > span { display:block; font-weight:550; font-size:.82rem; color:#705c7c; }
+.mail-choice + .mail-choice { margin-top:8px; }
+@media screen and (max-width:600px) {
+  .resume-header { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:2px 10px; }
+  .resume-header > div:first-child { display:contents; }
+  .resume-header :is(.eyebrow,h1,.identity) { grid-column:1; }
+  .resume-header .portrait { grid-column:2; grid-row:1/4; }
+  .resume-header .contacts { grid-column:1/-1; }
+}

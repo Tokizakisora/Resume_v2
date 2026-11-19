@@ -5,3 +5,22 @@
 @media print{@page{size:A4;margin:10mm}body{background:white;font-size:9pt;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}.resume-tools{display:none}.resume-sheet{width:100%;max-width:none;margin:0;padding:0;border:0;border-radius:0;box-shadow:none}.resume-header{padding-bottom:12px;gap:20px}.eyebrow{font-size:7pt}h1{font-size:27pt;margin:3px 0 4px}.identity{font-size:10pt}.contacts{font-size:8pt;margin-top:6px}.portrait{width:72px}.portrait img{height:78px}.intro{font-size:9pt;line-height:1.75;padding:12px 0 14px}.resume-columns{grid-template-columns:minmax(0,1.95fr) minmax(0,1fr);gap:22px}.resume-aside{padding-left:18px;border-left:1px solid var(--line);border-top:0;padding-top:0}section{margin-bottom:15px}h2{font-size:10.5pt;margin-bottom:8px;padding-bottom:4px}h3{font-size:9pt;line-height:1.6}h3 small{font-size:7pt;margin-left:8px}.education p,section>p,.work p{font-size:8.2pt;line-height:1.7;margin-top:3px}.education+.education{margin-top:8px}.status{font-size:7pt;margin-left:7px}.work{margin-bottom:10px}.tools{font-size:7.3pt;margin-top:3px}.more-work{font-size:7.5pt!important;padding-top:7px;line-height:1.8!important}.top-award{padding:9px;border-radius:6px;margin-bottom:5px}.top-award strong{font-size:15pt}.top-award p{font-size:8pt;line-height:1.65;margin-top:4px}.award-list li{display:block;font-size:7.6pt;padding:4px 0;line-height:1.55}.award-list b{font-size:7.6pt;line-height:1.5;margin-top:1px}.skill-list dt{font-size:8pt;margin-top:6px}.skill-list dd{font-size:7.8pt;line-height:1.6;margin-top:2px}.cert-list li{font-size:7.6pt;padding:3px 0}.resume-aside section>p{font-size:7.8pt;line-height:1.7}footer{padding-top:8px;font-size:7pt}footer>span{display:inline}a{text-decoration:none;color:inherit}h2,h3{break-after:avoid}}
 @media print{.resume-main .cert-list{grid-template-columns:1fr 1fr;column-gap:20px}.resume-main .cert-list li{font-size:7.6pt;padding:4px 0}.resume-aside section{margin-bottom:12px}.award-list li{padding:3px 0}section:last-child{margin-bottom:10px}}
 @media print{.resume-header{padding-bottom:8px}.intro{padding:9px 0 10px}section{margin-bottom:12px}.resume-aside section{margin-bottom:10px}footer{padding-top:5px}}
+
+@media screen {
+  .resume-sheet h2 { font-size:18px; letter-spacing:.025em; }
+  .resume-sheet h3 { font-size:15px; }
+  .work p,.education p { font-size:14px; color:#5f506a; }
+  .work h3 { display:flex; align-items:baseline; flex-wrap:wrap; gap:3px 12px; }
+  .work h3 small { margin:0; }
+  .work h3 a { text-decoration:underline; text-decoration-color:#cbb7d7; text-underline-offset:4px; }
+  .work+.work { border-top:1px solid #eee7f2; padding-top:14px; }
+  .resume-aside .award-list li { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; align-items:baseline; font-size:12px; }
+  .resume-aside .award-list b { text-align:right; }
+  .more-work a { display:inline-block; text-decoration:underline; text-decoration-color:#cbb7d7; }
+}
+.identity .degree::before { content:" · "; }
+.identity .class-year { white-space:nowrap; }
+@media screen and (max-width:600px) {
+  .identity .degree { display:block; }
+  .identity .degree::before { content:none; }
+}

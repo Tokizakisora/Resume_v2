@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" fill="none" stroke="#825e9c" stroke-linecap="round" stroke-linejoin="round">
+  <!-- An open repeat: traces entering a tile continue in the next one. -->
+  <g stroke-width="1.5">
+    <path d="M0 94H59l29 29h72l23-23h45M0 102h54l29 29h60"/>
+    <circle cx="232" cy="100" r="4"/><circle cx="146" cy="131" r="2.5"/>
+    <path d="M466 317h60l24-24h51l29-29h90M579 306h28l28-28h47"/>
+    <circle cx="461" cy="317" r="4"/><circle cx="576" cy="306" r="2.5"/>
+    <path d="M720 94h-34l-16-16h-38M720 102h-17"/>
+    <circle cx="629" cy="78" r="2.5"/>
+    <path d="M0 264h29l19-19h21"/><circle cx="72" cy="245" r="2.5"/>
+  </g>
+  <g stroke-width="1.6">
+    <g transform="translate(269 174) rotate(-8)">
+      <rect width="35" height="27" rx="4"/><path d="M1 7h33m-26 6 4 4-4 4m9 0h6"/>
+    </g>
+    <g transform="translate(589 52) rotate(9)">
+      <rect width="20" height="20" rx="3"/><rect x="5" y="5" width="10" height="10" rx="1"/>
+      <path d="M5-4v4m5-4v4m5-4v4M5 20v4m5-4v4m5-4v4M-4 5h4m-4 5h4m-4 5h4m20-10h4m-4 5h4m-4 5h4"/>
+    </g>
+    <path d="M114 371h10v10h-10zm12 0h10v10h-10zm0 12h10v10h-10zm12 0h10v10h-10z"/>
+  </g>
+  <g stroke-width="1" opacity=".8">
+    <path d="M374 34v6m-3-3h6M62 194v6m-3-3h6M410 391v6m-3-3h6M687 442v6m-3-3h6"/>
+    <path d="M343 267h22m-11-11v22" stroke-dasharray="1 4"/>
+  </g>
+</svg>

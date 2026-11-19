@@ -3,35 +3,100 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>林柏翰｜個人履歷與作品</title>
-<meta name="description" content="臺科大資工系林柏翰的履歷與作品集。從機器人競賽、C/C++ 遊戲程式，到硬體實作，記錄將想法做成作品的學習歷程。">
+<meta name="description" content="臺科大資工系林柏翰的大學部專題申請履歷。收錄物件導向課程作品、機器人競賽程式與個人學經歷。">
 <meta name="theme-color" content="#f3edf7">
 <link rel="icon" href="images/avatar.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/background.css">
+<link rel="stylesheet" href="css/collection.css">
+<link rel="stylesheet" href="css/profile-sections.css">
+<link rel="preload" href="assets/NotoSansTC.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body>
+<div class="gallery-backdrop" aria-hidden="true"><span class="field-pattern" aria-hidden="true"></span></div>
 <a class="skip-link" href="#main">跳到主要內容</a>
 <div class="reading-progress" aria-hidden="true"></div>
 <header class="site-nav"><a class="brand" href="#top"><span aria-hidden="true">林</span>林柏翰<small>PORTFOLIO</small></a><nav aria-label="主要導覽"><a href="#about">關於我</a><a href="#projects">作品</a><a href="#resume">學經歷</a><a href="#skills">技能</a><a href="#awards">競賽</a><a href="#contact">聯絡</a></nav></header>
 <main id="main">
 <section class="hero shell" id="top" aria-labelledby="hero-title">
-<div class="hero-copy"><p class="eyebrow">PORTFOLIO & RESUME <span>2026</span></p><h1 id="hero-title">林柏翰</h1><p class="identity">國立臺灣科技大學<br class="mobile-break"> 資訊工程系 · 二年級乙班</p><p class="hero-statement">從遊戲的想像出發，<br>用程式與實作累積成長。</p><p class="hero-intent"><span>希望加入賴祐吉教授實驗室，</span><span>參與大學部專題學習。</span></p><div class="hero-actions"><a class="button primary" href="#projects">瀏覽作品 <span aria-hidden="true">↘</span></a><a class="button secondary" href="resume.html">閱讀簡歷 <span aria-hidden="true">↗</span></a></div><a class="hero-email" href="mailto:hank117012@gmail.com">hank117012@gmail.com <span aria-hidden="true">↗</span></a></div>
-<div class="hero-visual"><div class="portrait-frame"><img id="portrait" src="images/avatar.svg" alt="個人頭像預留位置" width="320" height="360"><span>林柏翰 / PORTFOLIO</span></div><div class="hero-award"><span>第 54 屆<span class="award-event-name">全國技能競賽</span></span><strong>第 1 名</strong><small>青年組機器人職類</small></div></div>
-<span class="hero-edition" aria-hidden="true">SELECTED WORK · LEARNING JOURNEY</span>
-</section>
-<div class="shell section" id="about"><div class="section-title reveal"><div><p class="eyebrow">01 / ABOUT</p><h2>讓興趣，累積成實作。</h2></div><p class="section-aside">從高中資訊科，到臺科大資工。</p></div>
-<div class="about-grid"><article class="about-story reveal"><p class="lead">《刀劍神域》的 NerveGear，<br>是我走進資訊領域的起點。</p><p>我嚮往能在虛擬世界裡，與具自主行為的人工智慧互動。這個想像讓我高中選讀資訊科，也讓我開始認真投入課業、競賽與技術士證照。</p><p>從 C 文字遊戲、App Inventor 到 LabVIEW 機器人，再到大學的 C++ 課程專案，我持續練習把想法拆成邏輯，讓程式產生可以觀察的結果。</p></article>
-<article class="learning-note reveal"><p class="eyebrow">NEXT CHAPTER</p><h3>目前想往前走的一步</h3><p>大一下曾修習賴祐吉教授的物件導向程式設計與實習。希望在老師指導下，從基礎學習與小型專題開始，探索遊戲程式、電腦圖學與互動相關題目。</p><div class="interest-list"><span>遊戲邏輯</span><span>圖學與互動</span><span>虛擬世界與 AI</span></div><p class="muted">這些是想持續學習的方向；目前的基礎來自課程作品與競賽實作。</p></article></div>
-<div class="current-note reveal"><span class="status"><i aria-hidden="true"></i>近期參與</span><div><h3>2026 行動通訊實務競賽</h3><p>已提交企畫書，並入圍決賽。</p></div><div class="current-date"><strong>12.12</strong><span>2026 決賽日期</span></div><a href="https://mcpc-2026-nchu.web.app/" target="_blank" rel="noopener noreferrer" class="text-link">競賽資訊 ↗</a></div>
+<div class="hero-circuit" aria-hidden="true">
+  <svg viewBox="0 0 310 260" fill="none" focusable="false" stroke-linecap="round" stroke-linejoin="round">
+    <defs><path id="logic-wire" d="M75 65H97L123 91V119H150M196 126H224L246 148V174"/></defs>
+    <use href="#logic-wire" stroke="#a085b2" stroke-width="1.5"/>
+    <use class="circuit-signal" href="#logic-wire" stroke="#825490" stroke-width="3"/>
+  </svg>
 </div>
-<section class="shell section" id="projects" aria-labelledby="projects-title"><div class="section-title reveal"><div><p class="eyebrow">02 / SELECTED WORK</p><h2 id="projects-title">從程式，到看得見的作品。</h2></div><p class="section-aside">點開作品，看看我怎麼做。</p></div><div class="project-tools"><div class="filters" role="group" aria-label="篩選作品"><button type="button" data-filter="all" aria-pressed="true">全部作品</button><button type="button" data-filter="game" aria-pressed="false">遊戲程式</button><button type="button" data-filter="robot" aria-pressed="false">機器人</button><button type="button" data-filter="hardware" aria-pressed="false">硬體與建模</button></div><p id="filter-status" role="status" aria-live="polite"></p></div><div id="project-grid" class="project-grid"></div><div class="more-wrap"><button class="button secondary" type="button" id="show-more">展開其餘作品 <span aria-hidden="true">＋</span></button></div><noscript><p>作品互動需要 JavaScript。可先閱讀<a href="resume.html">簡歷版</a>，了解求學背景與代表成果。</p></noscript></section>
-<section class="resume-band" id="resume"><div class="shell section"><div class="section-title reveal"><div><p class="eyebrow">03 / LEARNING JOURNEY</p><h2>學習的每一步，都留下作品。</h2></div><a class="text-link" href="resume.html">完整簡歷 ↗</a></div><div class="resume-grid"><div class="timeline"><article class="timeline-item reveal"><span class="timeline-label">現在 · 大二</span><h3>國立臺灣科技大學</h3><p class="timeline-degree">資訊工程系 · 二年級乙班</p><p>大一就讀不分系，後進入資工系。現在持續累積程式能力，並參與行動通訊實務競賽。</p></article><article class="timeline-item reveal"><span class="timeline-label">大一下</span><h3>物件導向程式設計與實習</h3><p class="timeline-degree">授課教師：賴祐吉教授</p><p>以 C++ 完成象棋與積木拼圖課程專案，練習資料結構、模組拆分、規則判斷與搜尋。</p><button class="inline-button" type="button" data-open-project="puzzle">查看課程作品 ↗</button></article><article class="timeline-item reveal"><span class="timeline-label">高中</span><h3>國立基隆商工 · 資訊科</h3><p>透過程式設計、數位邏輯、可程式邏輯與單晶片課程打下基礎，再將所學帶進機器人與 APP 競賽。</p></article></div><aside class="activities reveal"><p class="eyebrow">BEYOND THE CLASSROOM</p><h3>校園參與與表達</h3><div><h4>班級與學生自治</h4><p>班長、副班長、實習股長、學生會班級代表。</p></div><div><h4>科學創客社</h4><p>擔任活動組組長。</p></div><div><h4>多元學習</h4><p>參與領導人才培訓、資安體驗與相關培訓；透過閱讀心得寫作練習整理觀點與表達。</p></div><span class="aside-mark" aria-hidden="true">LEARN<br>BUILD<br>REFINE.</span></aside></div></div></section>
-<section class="shell section" id="skills"><div class="section-title reveal"><div><p class="eyebrow">04 / SKILLS & CERTIFICATIONS</p><h2>用實際作品，說明所學。</h2></div><p class="section-aside">從工具到實作，持續累積。</p></div><div class="skills-layout"><div class="skill-links"><button type="button" data-open-project="puzzle" class="skill-item reveal"><span class="skill-code">C / C++</span><span><strong>程式邏輯與遊戲實作</strong><small>文字戰鬥、象棋、積木拼圖</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="triangle" class="skill-item reveal"><span class="skill-code">LabVIEW</span><span><strong>機器人程式與控制</strong><small>技能競賽、警示裝置、照護原型</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="app" class="skill-item reveal"><span class="skill-code">App Inventor</span><span><strong>手機遊戲程式開發</strong><small>關卡、頭目戰、商店與觸控</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="dice" class="skill-item reveal"><span class="skill-code">Hardware</span><span><strong>數位邏輯與硬體實作</strong><small>CPLD、介面卡、基礎 3D 建模</small></span><span aria-hidden="true">↗</span></button></div><div class="cert-panel reveal"><div class="cert-heading"><h3>專業技術士證照</h3><span>2 張乙級 · 4 張丙級</span></div><ul id="certificate-list"></ul></div></div></section>
-<section class="shell section" id="awards"><div class="section-title reveal"><div><p class="eyebrow">05 / HONORS</p><h2>競賽與成果紀錄。</h2></div><p class="section-aside">在實作之外，也練習面對挑戰。</p></div><div class="awards-layout"><div class="award-feature reveal"><span class="eyebrow">ROBOTICS</span><span class="award-number">01<span>全國第一名</span></span><h3>第 54 屆全國技能競賽</h3><p>青年組機器人職類</p><button class="inline-button" type="button" data-open-project="robot">閱讀競賽經驗 ↗</button></div><div class="award-rows" id="award-list"></div></div></section>
-<section class="contact shell reveal" id="contact"><div><p class="eyebrow">06 / CONTACT</p><h2>期待把下一個問題，<br>做成下一個作品。</h2><p>希望有機會向賴祐吉教授請教，從大學部專題開始更深入地學習。</p></div><div class="contact-actions"><a href="mailto:hank117012@gmail.com" class="contact-email">hank117012@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-buttons"><button type="button" class="button secondary" id="copy-email">複製 Email</button><a href="resume.html" class="button secondary">簡歷／列印版 ↗</a></div><p id="phone-row" hidden>手機 <span id="phone-value"></span></p><p id="github-row" hidden><a id="github-link" rel="noopener noreferrer" target="_blank">GitHub ↗</a></p></div></section>
+<div class="hero-copy">
+  <p class="eyebrow">賴祐吉教授實驗室 · 大學部專題申請</p>
+  <h1 id="hero-title">林柏翰</h1>
+  <p class="identity">國立臺灣科技大學<br class="mobile-break"> 資訊工程系 · 二年級乙班</p>
+  <p class="hero-statement">我想做出能自主行動、<br>與玩家互動的虛擬角色。</p>
+  <p class="hero-intent"><span>在老師的物件導向課，</span><span>我用 C++ 寫象棋與拼圖。</span></p>
+  <div class="hero-actions"><a class="button primary" href="resume.html">閱讀簡歷</a><a class="button secondary" href="#projects">瀏覽作品</a></div>
+  <div class="hero-email email-pair"><a href="mailto:b11430236@mail.ntust.edu.tw">b11430236@mail.ntust.edu.tw</a><a href="mailto:hank117012@gmail.com">hank117012@gmail.com</a></div>
+</div>
+<div class="hero-visual"><div class="portrait-frame"><img id="portrait" src="images/avatar.svg" alt="個人頭像預留位置" width="320" height="360"><span>林柏翰 / PORTFOLIO</span></div><div class="hero-award"><span>第 54 屆<span class="award-event-name">全國技能競賽</span></span><strong>第 1 名</strong><small>青年組機器人職類</small></div></div>
+
+</section>
+<section class="shell section" id="about" aria-labelledby="about-title"><div class="section-title reveal"><div><h2 id="about-title">關於我</h2></div></div>
+<div class="about-grid">
+  <article class="about-story reveal">
+    <p class="lead">《刀劍神域》的 NerveGear<br>讓我選讀資訊科。</p>
+    <p>我好奇，如果虛擬角色有自己的想法，玩家能怎麼和它相處？我也希望有一技之長，能自己選擇工作與生活。高中時，我從機器人競賽和技術士檢定開始累積實作經驗。</p>
+  </article>
+  <article class="learning-note reveal">
+    <h3>從遊戲規則到角色互動</h3>
+    <p>寫象棋時，我要判斷每一步能不能走。寫拼圖時，我讓程式找出下一步。接下來，我想從一個小型遊戲專題學習電腦圖學，試著讓角色能回應玩家的選擇。</p>
+    <div class="course-links" aria-label="物件導向課程作品">
+      <p>物件導向課程作品</p>
+      <button type="button" data-open-project="puzzle">積木拼圖</button>
+      <button type="button" data-open-project="chess">中國象棋</button>
+    </div>
+  </article>
+</div>
+<article class="competition-note reveal">
+  <div class="competition-copy"><p class="competition-status">已入圍決賽</p><h3>2026 行動通訊實務競賽</h3><p>團隊已提交參賽企畫書。</p></div>
+  <div class="competition-date"><span>決賽日期</span><time datetime="2026-12-12">2026 年 12 月 12 日</time></div>
+  <a class="text-link" href="https://mcpc-2026-nchu.web.app/" target="_blank" rel="noopener noreferrer">競賽官網</a>
+</article>
+</section>
+<section class="shell section" id="projects" aria-labelledby="projects-title"><div class="section-title reveal"><div><h2 id="projects-title">作品選集</h2></div></div><div class="project-tools"><div class="filters" role="group" aria-label="篩選作品"><button type="button" data-filter="all" aria-pressed="true">全部作品</button><button type="button" data-filter="game" aria-pressed="false">遊戲程式</button><button type="button" data-filter="robot" aria-pressed="false">機器人</button><button type="button" data-filter="hardware" aria-pressed="false">硬體與建模</button></div><div class="view-picker" role="group" aria-label="作品呈現方式">
+  <button type="button" data-view="cards" aria-pressed="true" aria-controls="project-grid"><span class="view-icon icon-cards" aria-hidden="true"></span>圖卡</button>
+  <button type="button" data-view="catalog" aria-pressed="false" aria-controls="project-grid"><span class="view-icon icon-catalog" aria-hidden="true"></span>目錄</button>
+</div></div><p id="filter-status" role="status" aria-live="polite"></p><div id="project-grid" class="project-grid"></div><div class="more-wrap"><button class="button secondary" type="button" id="show-more">展開其餘作品 <span aria-hidden="true">＋</span></button></div><noscript><p>作品互動需要 JavaScript。可先閱讀<a href="resume.html">簡歷版</a>，了解求學背景與代表成果。</p></noscript></section>
+<section class="resume-band" id="resume"><span class="field-pattern" aria-hidden="true"></span><div class="shell section"><div class="section-title reveal"><div><h2>學歷與校園經歷</h2></div><a class="text-link" href="resume.html">完整簡歷 ↗</a></div><div class="resume-grid"><div class="timeline"><article class="timeline-item reveal" aria-current="step"><span class="timeline-label">現在 · 大二</span><h3>國立臺灣科技大學</h3><p class="timeline-degree">資訊工程系 · 二年級乙班</p><p>經技優保送入學，由大一不分系丙班分流至資工系。</p></article><article class="timeline-item reveal"><span class="timeline-label">大一下</span><h3>物件導向程式設計與實習</h3><p class="timeline-degree">授課教師：賴祐吉教授</p><p>用 C++ 拆分棋盤與規則模組，實作拼圖的旋轉與解題提示。</p><button class="inline-button" type="button" data-open-project="puzzle">查看課程作品 ↗</button></article><article class="timeline-item reveal"><span class="timeline-label">高中</span><h3>國立基隆商工 · 資訊科</h3><p>修習程式設計、數位邏輯與單晶片實作，參加機器人及手機應用競賽。</p></article></div><aside class="activities reveal"><h3>校園參與與表達</h3><div><h4>班級與學生自治</h4><p>班長、副班長、實習股長、學生會班級代表。</p></div><div><h4>科學創客社</h4><p>擔任活動組組長。</p></div><div><h4>多元學習</h4><p>參與領導人才培訓、資安體驗，也透過閱讀心得寫作練習整理觀點。</p></div></aside></div></div></section>
+<section class="skills-band" id="skills" aria-labelledby="skills-title"><span class="field-pattern" aria-hidden="true"></span><div class="shell section"><div class="section-title reveal"><div><h2 id="skills-title">技能與證照</h2></div></div><div class="skills-layout"><div class="skill-links"><button type="button" data-open-project="puzzle" class="skill-item reveal"><span class="skill-code">C / C++</span><span><strong>程式邏輯與遊戲實作</strong><small>文字戰鬥、象棋、積木拼圖</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="triangle" class="skill-item reveal"><span class="skill-code">LabVIEW</span><span><strong>機器人程式與控制</strong><small>技能競賽、警示裝置、照護原型</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="app" class="skill-item reveal"><span class="skill-code">App Inventor</span><span><strong>手機遊戲程式開發</strong><small>關卡、頭目戰、商店與觸控</small></span><span aria-hidden="true">↗</span></button><button type="button" data-open-project="dice" class="skill-item reveal"><span class="skill-code">Hardware</span><span><strong>數位邏輯與硬體實作</strong><small>CPLD、介面卡、基礎 3D 建模</small></span><span aria-hidden="true">↗</span></button></div><div class="cert-panel"><div class="cert-heading"><h3>專業技術士證照</h3></div><div id="certificate-list"></div></div></div></div></section>
+<section class="shell section" id="awards"><div class="section-title reveal"><div><h2>競賽與獲獎</h2></div></div><div class="awards-layout"><article class="honor-feature reveal">
+  <h3>第 54 屆全國技能競賽</h3>
+  <strong>全國第一名</strong>
+  <p>青年組機器人職類</p>
+  <button type="button" data-open-project="robot">查看機器人競賽作品</button>
+</article><div class="award-rows" id="award-list"></div></div></section>
+<section class="contact shell reveal" id="contact"><span class="field-pattern" aria-hidden="true"></span><div class="contact-invitation"><h2>聯絡我</h2><p>希望能和老師約時間，討論適合大二開始的專題，以及我可以先做的準備。</p><a class="text-link" href="resume.html">閱讀完整簡歷</a></div>
+<div class="contact-actions"><div class="mail-choice"><span>臺科大信箱</span><a class="contact-email" href="mailto:b11430236@mail.ntust.edu.tw">b11430236@mail.ntust.edu.tw</a></div>
+<div class="mail-choice"><span>常用信箱</span><a href="mailto:hank117012@gmail.com">hank117012@gmail.com</a></div>
+<div class="contact-buttons"><a class="button primary" href="mailto:b11430236@mail.ntust.edu.tw?subject=大學部專題面談">寫信給柏翰</a><button type="button" class="button secondary" id="copy-email">複製臺科大信箱</button></div><p id="phone-row" hidden>手機 <span id="phone-value"></span></p><p id="github-row" hidden><a id="github-link" rel="noopener noreferrer" target="_blank">GitHub ↗</a></p></div></section>
 </main>
 <footer class="shell site-footer"><span>林柏翰 · 個人履歷與作品</span><span>更新於 2026.11</span><a href="#top">回到頁首 ↑</a></footer>
 <div id="toast" role="status" aria-live="polite"></div>
-<dialog id="project-dialog" aria-labelledby="detail-title"><div class="dialog-toolbar"><span class="eyebrow">PROJECT NOTES</span><button type="button" class="close-button" data-close="project-dialog" aria-label="關閉作品詳情">關閉 ×</button></div><div id="detail-content"></div></dialog>
-<dialog id="image-dialog" aria-labelledby="image-title"><div class="dialog-toolbar"><h2 id="image-title">作品圖片</h2><button type="button" class="close-button" data-close="image-dialog" aria-label="關閉放大圖片">關閉 ×</button></div><div class="lightbox-stage" aria-busy="false"><img id="large-image" alt=""><p id="image-error" hidden>圖片暫時無法載入，請切換其他圖片。</p></div><div class="lightbox-controls"><button type="button" class="button secondary" id="previous-image" aria-label="上一張圖片">← 上一張</button><span id="image-counter" aria-live="polite"></span><button type="button" class="button secondary" id="next-image" aria-label="下一張圖片">下一張 →</button></div></dialog>
-<script src="js/profile.js"></script><script src="js/profile-view.js"></script><script src="js/content.js"></script><script src="js/site.js"></script>
+<dialog id="project-dialog" aria-labelledby="detail-title"><div class="dialog-toolbar"><span class="detail-context"></span><a class="detail-resume-link" href="resume.html#work" hidden>回到簡歷</a><button type="button" class="close-button" data-close="project-dialog" aria-label="關閉作品詳情">關閉 ×</button></div><div id="detail-content"></div></dialog>
+<dialog id="image-dialog" aria-labelledby="image-title"><div class="dialog-toolbar"><h2 id="image-title">作品圖片</h2><button type="button" class="close-button" data-close="image-dialog" aria-label="關閉放大圖片">關閉 ×</button></div><div class="lightbox-stage" aria-busy="false"><div id="image-viewport" tabindex="0" role="region" aria-label="作品圖片，放大後可拖曳或捲動查看"><div id="image-canvas"><img id="large-image" alt="" draggable="false"></div></div><p id="image-error" hidden>圖片暫時無法載入，請切換其他圖片。</p></div><div class="image-description"><p id="image-caption"></p><p id="image-hint">點選放大，可查看圖片細節</p></div><div class="lightbox-controls"><button type="button" class="button secondary" id="previous-image" aria-label="上一張圖片">← 上一張</button><div class="image-tools"><span id="image-counter" aria-live="polite"></span><button type="button" id="zoom-image" aria-pressed="false">放大 2×</button></div><button type="button" class="button secondary" id="next-image" aria-label="下一張圖片">下一張 →</button></div></dialog>
+<template id="rotation-template">
+  <div class="rotation-exhibit">
+    <div class="rotation-illustration" aria-hidden="true">
+      <div class="axis-columns"><span>0</span><span>1</span><span>2</span></div>
+      <div class="axis-rows"><span>0</span><span>1</span><span>2</span></div>
+      <div class="rotation-board"></div>
+    </div>
+    <div class="rotation-controls">
+      <p class="rotation-source">第一關零件 · 互動示意</p>
+      <p class="rotation-heading">旋轉後，<br>同一格在哪裡？</p>
+      <p class="rotation-key">白點標示同一格。座標依序為列、欄，從 0 起算。</p>
+      <button type="button" class="rotate-piece">順時針轉 90° <span aria-hidden="true">↻</span></button>
+      <output class="rotation-status" aria-live="polite" aria-atomic="true"></output>
+    </div>
+  </div>
+</template>
+<script src="js/profile.js"></script><script src="js/profile-view.js"></script><script src="js/content.js"></script><script src="js/site.js"></script><script src="js/puzzle-preview.js"></script>
 </body></html>

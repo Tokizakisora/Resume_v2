@@ -1,0 +1,145 @@
+/* Gallery 的頁邊底紋共用於作品首頁和簡歷。 */
+@media screen {
+  body { isolation:isolate; }
+  .gallery-backdrop {
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+    pointer-events:none;
+    background:
+      radial-gradient(ellipse at 0 22%, #d9c5e350, transparent 34%),
+      radial-gradient(ellipse at 100% 76%, #ead7ce65, transparent 32%);
+  }
+  .gallery-backdrop::before, .gallery-backdrop::after {
+    content:"";
+    position:absolute;
+    inset-block:0;
+    width:clamp(9px, calc((100% - 1120px) / 2 - 8px), 150px);
+    background-image:url("../assets/backgrounds/margin-trace.svg");
+    background-repeat:repeat-y;
+    background-size:110px auto;
+    opacity:.57;
+  }
+  .gallery-backdrop::before { left:0; background-position:left 0 top 9vh; }
+  .gallery-backdrop::after { right:0; transform:rotate(180deg); background-position:left 0 top -12vh; }
+  .hero-circuit {
+    position:absolute;
+    z-index:-1;
+    pointer-events:none;
+    width:29%;
+    left:40%;
+    top:50%;
+    transform:translateY(-50%);
+    aspect-ratio:310 / 260;
+    background:url("../assets/backgrounds/logic-trail.svg") center / contain no-repeat;
+    opacity:.84;
+  }
+}
+.hero-circuit svg { display:block; width:100%; height:100%; }
+.circuit-signal { display:none; }
+@media screen and (prefers-reduced-motion:no-preference) {
+  .circuit-signal { display:block; stroke-dasharray:9 260; animation:gallery-signal 8s ease-in-out infinite; }
+  @keyframes gallery-signal {
+    0% { stroke-dashoffset:10; opacity:0; }
+    10% { opacity:1; }
+    60% { opacity:1; }
+    74%,100% { stroke-dashoffset:-107; opacity:0; }
+  }
+}
+@media screen and (min-width:601px) and (max-width:1100px) {
+  .hero-circuit { width:clamp(85px,18%,155px); left:42%; top:14px; transform:none; opacity:.78; }
+}
+@media screen and (max-width:1200px) {
+  .gallery-backdrop::before,.gallery-backdrop::after {
+    background-image:radial-gradient(circle,#ad94b9 1px,transparent 1.4px);
+    background-size:7px 20px;
+    background-repeat:repeat;
+    opacity:.33;
+  }
+}
+@media screen and (max-width:600px) {
+  .hero-circuit { width:min(32%,140px); left:auto; right:3%; top:22px; transform:none; }
+  .gallery-backdrop::before,.gallery-backdrop::after { width:9px; opacity:.4; }
+}
+@media print {
+  .gallery-backdrop,.hero-circuit { display:none; }
+}
+
+/* 同一張圖樣連續鋪在閱讀區，遮住頁底的色塊也使用相同線條。 */
+@media screen {
+  :root {
+    --field-art:url("../assets/backgrounds/gallery-field.svg");
+    --field-size:680px auto;
+  }
+  .field-pattern {
+    --field-origin:0 0;
+    --field-ink:.18;
+    --field-light:.45;
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    border-radius:inherit;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .field-pattern::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:var(--field-art) var(--field-origin) / var(--field-size) repeat;
+    opacity:var(--field-ink);
+  }
+  .gallery-backdrop .field-pattern { z-index:auto; }
+  .resume-band,.contact,.resume-sheet { position:relative; isolation:isolate; }
+  .resume-band .field-pattern { --field-origin:40px -120px; --field-ink:.13; --field-light:.18; }
+  .contact .field-pattern { --field-origin:60% 42%; --field-ink:.13; --field-light:.21; }
+  .resume-sheet .field-pattern { --field-origin:center -60px; --field-ink:.08; --field-light:.09; }
+
+  /* 圖片佔滿手機畫面時，圖樣仍延續到作品說明的留白。 */
+  .project-card { isolation:isolate; }
+  .about-story,.timeline,.award-rows {
+    background-image:linear-gradient(100deg,#f6f1f85e,#f6f1f846 62%,transparent);
+  }
+  .project-card::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    background:var(--field-art) right 18% bottom -95px / 530px auto repeat;
+    mask-image:linear-gradient(107deg,transparent 35%,#000);
+    opacity:.15;
+  }
+  .section-title::after {
+    height:9px;
+    background:
+      radial-gradient(circle at calc(100% - 4px) 50%,#b99bc9 2px,transparent 2.6px),
+      linear-gradient(90deg,#ba9bcf,#e2cedd) left center / calc(100% - 6px) 1px no-repeat;
+  }
+}
+@media screen and (prefers-reduced-motion:no-preference) {
+  .field-pattern::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(112deg,transparent 37%,#62317d 48%,#ac708d 52%,transparent 63%) 120% center / 260% 100% no-repeat;
+    mask:var(--field-art) var(--field-origin) / var(--field-size) repeat;
+    opacity:var(--field-light);
+    animation:field-sweep 13s ease-in-out infinite;
+  }
+  .resume-band .field-pattern::after { animation-delay:-4s; }
+  .contact .field-pattern::after { animation-delay:-7s; }
+  @keyframes field-sweep {
+    0% { background-position:120% center; }
+    85%,100% { background-position:-20% center; }
+  }
+}
+@media screen and (max-width:700px) {
+  :root { --field-size:410px auto; }
+  .gallery-backdrop .field-pattern { --field-origin:45px -20px; --field-ink:.14; --field-light:.22; }
+  .project-card::before { background-size:380px auto; }
+}
+@media print {
+  .field-pattern { display:none; }
+}

@@ -1,0 +1,98 @@
+/* 作品導覽、得獎記錄和文字閱讀面。 */
+@media screen {
+  .about-story {
+    padding:clamp(20px, 2.4vw, 34px);
+    border:1px solid #e4d9ea;
+    border-radius:18px;
+    background:linear-gradient(115deg,#fffcfffa,#fbf7fbed);
+  }
+  .about-grid { gap:clamp(16px,2vw,28px); }
+  .about-story > p:not(.lead), .learning-note > p:not(.eyebrow) { font-size:1rem; color:#594c63; }
+  .course-links { display:flex; flex-wrap:wrap; align-items:center; gap:4px 10px; margin-top:18px; border-top:1px solid var(--line); padding-top:13px; }
+  .course-links p { color:#6d5a7a; font-size:.84rem; flex-basis:100%; }
+  .course-links button, .honor-feature button {
+    min-height:44px; padding:7px 12px; border:1px solid #d9c9e4;
+    border-radius:8px; background:#f6effa; color:#54356f; font-size:.9rem;
+  }
+  .course-links button:hover { background:#eee1f7; }
+  .project-tools { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  #projects .project-tools { margin-bottom:0; padding-bottom:12px; }
+  #filter-status { margin:8px 0 15px; font-size:.82rem; color:#705e7d; }
+  .view-picker { display:inline-flex; gap:2px; flex-shrink:0; padding:3px; border:1px solid #d9cbe3; border-radius:11px; background:#f0e8f4; }
+  .view-picker button { display:flex; align-items:center; justify-content:center; gap:7px; min-height:44px; border:1px solid transparent; border-radius:8px; background:transparent; color:#64536d; padding:6px 12px; font-size:.875rem; }
+  .view-picker button[aria-pressed=true] { background:#fffdfd; border-color:#d4c1df; color:#503366; box-shadow:0 2px 6px #50336612; }
+  .view-icon { display:inline-block; width:14px; height:14px; }
+  .icon-cards { background:linear-gradient(currentColor 0 0) 0 0,linear-gradient(currentColor 0 0) 100% 0,linear-gradient(currentColor 0 0) 0 100%,linear-gradient(currentColor 0 0) 100% 100%; background-size:6px 6px; background-repeat:no-repeat; }
+  .icon-catalog { background:repeating-linear-gradient(transparent 0 2px,currentColor 2px 4px,transparent 4px 5px); }
+  .filters button,.current-note p,.current-note .text-link { font-size:.9rem; }
+  .current-date span { font-size:.78rem; }
+  .catalog-thumb { display:none; }
+  .project-grid.catalog { display:grid; grid-template-columns:minmax(0,1fr); gap:0; overflow:hidden; border:1px solid #dfd3e8; border-radius:18px; background:#fffcff; }
+  .catalog .project-card { display:grid; grid-template-columns:108px minmax(0,1fr); align-items:center; gap:22px; grid-column:auto; padding:15px 24px; border:0; border-bottom:1px solid #e9dfed; border-radius:0; background:transparent; box-shadow:none; }
+  .catalog .project-card:last-of-type { border-bottom:0; }
+  .catalog .project-card::before { display:none; }
+  .catalog .project-card:focus-within { background:#f4edf8; transform:none; }
+  .catalog .project-card:focus-within { outline:2px solid #976bb4; outline-offset:-3px; }
+  .catalog .catalog-thumb { display:grid; place-items:center; height:75px; overflow:hidden; border:1px solid #e4d9e9; border-radius:8px; background:#f2ebf6; }
+  .catalog-thumb img { width:100%; height:100%; min-height:0; object-fit:contain; }
+  .catalog-thumb.peach { background:#f5e9e4; }
+  .catalog-thumb.mint { background:#e9f0ec; }
+  .catalog-thumb.ink { background:#302837; }
+  .catalog .project-card .project-cover, .catalog .project-summary { display:none; }
+  .catalog .project-card .project-info {
+    padding:0; display:grid; grid-template-columns:minmax(0,1fr) minmax(130px,.65fr) auto;
+    grid-template-areas:"era tags open" "title tags open"; align-items:center; gap:1px 18px;
+  }
+  .catalog .project-meta { grid-area:era; }
+  .catalog .project-info h3 { grid-area:title; margin:0; font-size:1.17rem; line-height:1.55; text-wrap:wrap; }
+  .catalog .project-tags { grid-area:tags; margin:0; }
+  .catalog .project-open { grid-area:open; align-items:center; margin:0; padding:4px 0; border:0; font-size:.88rem; }
+  .catalog .project-open::after { border-radius:0; }
+  .catalog .tag { font-size:.8rem; }
+  .honor-feature {
+    container-type:inline-size;
+    position:sticky; top:108px; padding:clamp(24px,3vw,40px); border-radius:18px; color:#fff;
+    background:radial-gradient(ellipse at 100% 0%,#70577f 0%,transparent 70%),#40304e;
+    box-shadow:0 10px 25px #51386616;
+  }
+  .honor-feature h3 { font-size:1rem; color:#f2e4f6; font-weight:550; }
+  .honor-feature strong { display:block; font-size:clamp(1.8rem,17cqi,2.65rem); font-weight:670; letter-spacing:.02em; white-space:nowrap; line-height:1.35; margin:18px 0 8px; }
+  .honor-feature p { font-size:1rem; color:#eedff3; }
+  .honor-feature button { margin-top:22px; background:#f6ecfc; }
+  #awards .award-rows { background:#fffcfff5; border:1px solid #e1d4e9; border-radius:18px; padding:6px clamp(16px,2vw,26px) 12px; }
+  .honor-group { margin:0; }
+  .honor-group > h3 { color:#70527f; font-size:.9rem; margin:15px 0 0; padding:0 0 6px; border-bottom:1px solid #d8c7e1; }
+  .honor-group .award-row { padding:11px 0; }
+  .honor-group .award-row:last-child { border:0; }
+  .award-row h4 { font-size:1rem; font-weight:550; line-height:1.65; }
+  .award-row h4 button { min-height:44px; font:inherit; text-align:left; color:#5d4075; text-decoration:underline; text-decoration-color:#cbb3d8; text-underline-offset:4px; background:none; border:0; padding:3px 0; }
+  .award-row h4 button:hover { text-decoration-color:currentColor; }
+  .award-row small { font-size:.82rem; color:#6f6079; }
+  .award-row > strong { font-size:.9rem; }
+}
+@media screen and (hover:hover) and (pointer:fine) {
+  .catalog .project-card:hover { background:#f4edf8; transform:none; }
+}
+@media screen and (max-width:700px) {
+  .course-links button,.view-picker button,.filters button { font-size:.875rem; }
+  .project-tools { align-items:flex-start; flex-direction:column; }
+  .catalog .project-card { grid-template-columns:72px minmax(0,1fr); gap:12px; padding:13px 14px; }
+  .catalog .catalog-thumb { height:62px; }
+  .catalog .project-card .project-info { grid-template-columns:minmax(0,1fr); grid-template-areas:"era" "title" "tags"; gap:2px; }
+  .catalog .project-info h3 { font-size:1rem; text-decoration:underline; text-decoration-color:#d6c3df; text-underline-offset:4px; }
+  .catalog .project-tags { column-gap:7px; row-gap:0; }
+  .catalog .project-tags .tag { padding:0; background:none; color:#735683; font-size:.78rem; }
+  .catalog .project-open { position:absolute; inset:0; grid-area:auto; width:100%; height:100%; margin:0; padding:0; font-size:0; }
+  .catalog .project-open:focus-visible { outline:0; }
+  .honor-feature { position:static; }
+  .honor-feature strong { margin-top:8px; }
+  .honor-feature button { margin-top:14px; }
+  .honor-group .award-row { grid-template-columns:minmax(0,1fr) auto; gap:10px; }
+}
+@media screen and (max-width:600px) {
+  .site-nav nav { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); }
+  .site-nav nav a { padding:8px 0; display:grid; place-items:center; font-size:.875rem; white-space:nowrap; }
+}
+@media print {
+  .catalog-thumb,.view-picker,.honor-feature button,.course-links { display:none; }
+}
